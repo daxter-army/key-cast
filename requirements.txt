@@ -1,0 +1,14 @@
+altgraph==0.17.2
+autopep8==1.5.7
+certifi==2021.5.30
+charset-normalizer==2.0.4
+evdev==1.4.0
+idna==3.2
+pycodestyle==2.7.0
+pyinstaller==4.5.1
+pyinstaller-hooks-contrib==2021.3
+pynput==1.7.3
+python-xlib==0.31
+six==1.16.0
+toml==0.10.2
+urllib3==1.26.6
