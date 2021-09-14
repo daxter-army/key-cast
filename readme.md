@@ -8,6 +8,8 @@ A cross platform solution for screen casting your keypresses and mouse clicks, w
 
 - activate virtual env by opening the terminal in the project dir -> `source ./keycast_env/bin/activate`
 
+- then run -> `pip3 install -r requirements.txt`
+
 - open terminal in the project dir and run -> `python3 keycast_gui.py`
 
 **for testing purposes**
