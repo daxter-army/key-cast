@@ -23,3 +23,7 @@ Made with Pyton's Tkinter
 # Note
 
 Right now it is heavily under development, and is being developed in linux (ubuntu), can break if you try, because i am working on it to make compatible with all kind of keyboards (because sometimes key codes differ for same key combinations on different OS/PC)
+
+# Issues
+* Scrolling event not working in windows
+* testing pending in OS X
