@@ -6,18 +6,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> 
     <title>Keycast - Cast your keypresses and mouse clicks to your screen</title>
 </head>
 <body>
     <div id="wrapper">
-        <div id="key-card">
-            <div id="first-row">
-                <div id="first-row-left">Ctrl + Alt + Delete</div>
-                <div id="first-row-right"><i class="fas fa-times"></i></div>
+        <div id="heading-box">
+            <h1 id="main-heading">Key Cast</h1>
+            <p id="sub-heading">Screen cast your keyboard and mouse presses in style</p>
+        </div>
+        <div id="keycard-container">
+            <div id="key-card">
+                <div id="first-row">
+                    <div id="first-row-left">Ctrl + Alt + Delete</div>
+                    <div id="first-row-right"><i class="fas fa-times"></i></div>
+                </div>
+                <div id="second-row">L Shift ⇧ + Right ➡️</div>
+                <div id="third-row">Left Mouse Button</div>
             </div>
-            <div id="second-row">L Shift ⇧ + Right ➡️</div>
-            <div id="third-row">mouse action</div>
+            <div id="key-card">
+                <div id="first-row">
+                    <div id="first-row-left">Ctrl + Alt + Delete</div>
+                    <div id="first-row-right"><i class="fas fa-times"></i></div>
+                </div>
+                <div id="second-row">L Alt + F4</div>
+                <div id="third-row">Mouse Scroll Up ⬆️</div>
+            </div>
+            <div id="key-card">
+                <div id="first-row">
+                    <div id="first-row-left">Ctrl + Alt + Delete</div>
+                    <div id="first-row-right"><i class="fas fa-times"></i></div>
+                </div>
+                <div id="second-row">R Ctrl + Backspace ⌫</div>
+                <div id="third-row">Right Mouse Button</div>
+            </div>
+        </div>
+        <div id="features">
+            <h1 class="heading">Features</h1>
+            <div class="grid-container">
+                <!-- <div class="grid-item"> -->
+                    <div class="features-grid-card">
+                        <h3 class="feature-card-heading"><i class="fas fa-desktop"></i> Cross-platform</h3>
+                        <p class="feature-card-desc">Run it anywhere. Run it on Linux, Winows or OS X.</p>
+                    </div>
+                    <!-- <div>image here</div> -->
+                <!-- </div> -->
+                <!-- <div class="grid-item"> -->
+                    <!-- <div>image here</div> -->
+                    <div class="features-grid-card">
+                        <h3 class="feature-card-heading"><i class="far fa-keyboard"></i> Keyboard & mouse clicks</h3>
+                        <p class="feature-card-desc">From keyboard presses to mouse clicks, we've covered you all!</p>
+                    </div>
+                <!-- </div> -->
+                <!-- <div class="grid-item"> -->
+                    <div class="features-grid-card">
+                        <h3 class="feature-card-heading"><i class="fas fa-palette"></i> Show in style</h3>
+                        <p class="feature-card-desc">Choose from numerous themes, or create your own.</p>
+                    </div>
+                    <!-- <div>image here</div> -->
+                <!-- </div> -->
+                <!-- <div class="grid-item"> -->
+                    <!-- <div>image here</div> -->
+                    <div class="features-grid-card">
+                        <h3 class="feature-card-heading"><i class="fas fa-sliders-h"></i> Transparency control</h3>
+                        <p class="feature-card-desc">Adjust the transparency level of the panel as per your convenience.</p>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+        <div id="demonstration">
+            <h1 class="heading">In Action</h1>
+            <div id="sample-video">
+                <div id="play-button"><i id="video-button" class="fas fa-play-circle fa-4x"></i></div>
+                <video id="video-player" width="528" height="297" muted>
+                    <source src="./docs_assets/video/dummy_video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div id="downloads">
+            <h1 class="heading">Downloads</h1>
+            <div class="download-grid">
+                <div>
+                    <i class="fab fa-linux fa-3x"></i>
+                    <div class="download-btn">
+                        <a class="download-link"><i class="fas fa-arrow-down"></i> .deb</a>
+                    </div>
+                </div>
+                <div>
+                    <i class="fab fa-windows fa-3x"></i>
+                    <div class="download-btn">
+                        <a class="download-link"><i class="fas fa-arrow-down"></i> .exe</a>
+                    </div>
+                </div>
+                <div>
+                    <i class="fab fa-apple fa-3x"></i>
+                    <div class="download-btn">
+                        <a class="download-link">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        const VideoPlayer = document.getElementById('video-player')
+        const PlayButton = document.getElementById('play-button')
+        const VideoButton = document.getElementById('video-button')
+        let videoState = false
+
+        VideoPlayer.addEventListener('click', playPause)
+
+        VideoPlayer.addEventListener('mouseenter', () => {
+            if (videoState) {
+                // console.log('video state', videoState)
+                // console.log('mouse enter')
+                PlayButton.style.display = 'block'
+            }
+        })
+
+        VideoPlayer.addEventListener('mouseleave', () => {
+            if (videoState) {
+                // console.log('video state', videoState)
+                // console.log('mouse leave')
+                PlayButton.style.display = 'none'
+            }
+        })
+
+        VideoPlayer.addEventListener('play', () => {
+            videoState = true
+            VideoButton.className = "fas fa-pause-circle fa-4x"
+            PlayButton.style.display = "none"
+        })
+
+        VideoPlayer.addEventListener('pause', () => {
+            videoState = false
+            VideoButton.className = "fas fa-play-circle fa-4x" 
+            PlayButton.style.display = "block"
+        })
+
+        // PlayButton.addEventListener('click', () => {
+
+        // })
+
+        function playPause() {
+            if(VideoPlayer.paused) {
+                VideoPlayer.play()
+            }
+            else {
+                VideoPlayer.pause()
+            }
+        }
+    </script>
 </body>
 </html>

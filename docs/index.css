@@ -3,49 +3,151 @@
   src: url("./docs_assets/fonts/DejaVuSansRegular.ttf");
 }
 
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
+.heading {
+  margin: auto;
+  width: 80%;
+  padding: 20px 0px;
+  /* border: 1px red solid; */
+}
+
+#heading-box {
+  text-align: center;
+  margin: 15px auto;
+}
+
+#main-heading {
+  font-size: xxx-large;
+}
+
+#sub-heading {
+  font-size: larger;
+}
+
 #wrapper {
   /* border: 1px red solid; */
   /* margin-top: 50px; */
-  height: 100vh;
-  position: relative;
+}
+
+#keycard-container {
+  padding: 10px;
+  margin: 20px auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 15px;
+  /* border: 1px red solid; */
+  box-sizing: border-box;
+}
+
+#keycard-container > div {
+  /* border: 1px red solid; */
 }
 
 #key-card {
-  /*  */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /*  */
   margin: auto;
   padding: 8px 10px;
-  width: 500px;
+  width: 380px;
   font-family: dejavuSans;
   color: white;
   background-color: #13274f;
   /* border: 1px red solid; */
   border-radius: 3px;
+  box-sizing: border-box;
 }
 
 #key-card #first-row {
   display: flex;
   justify-content: space-between;
-  font-size: large;
+  font-size: 15px;
 }
 
 /* #key-card #first-row-left {
 } */
 
 #key-card #second-row {
-  margin: 15px 0px;
-  font-size: xxx-large;
+  /* padding-right: 60px; */
+  margin: 20px 0px;
+  font-size: 1.75rem;
 }
 
 #key-card #third-row {
-  font-size: x-large;
+  font-size: large;
+}
+
+.grid-container {
+  /* position: relative; */
+  margin: auto;
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* border: 1px red solid; */
+}
+
+/* .grid-item {
+  border: 1px red solid;
+} */
+
+.features-grid-card {
+  padding: 15px;
+}
+
+/* .grid-item > div {
+  border: 1px blue solid;
+  margin: 10px;
+} */
+
+.download-grid {
+  margin: auto;
+  width: 80%;
+}
+
+.download-grid {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  border: 1px red solid;
+}
+
+#sample-video {
+  margin: auto;
+  width: 400;
+  position: relative;
+  /* border: 1px purple solid; */
+}
+
+#video-player {
+  display: block;
+  margin: auto;
+  border-radius: 3px;
+  /* border: 1px red solid; */
+  /* position: absolute; */
+  /* z-index: 0; */
+}
+
+#play-button {
+  /* display: none; */
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#video-button {
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  #keycard-container {
+    width: 100%;
+  }
 }
