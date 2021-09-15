@@ -3,6 +3,15 @@ import tkinter as tk
 from tkinter import ttk
 import tkinter.font as font
 
+# for windows
+from assets.windowsHighDpi import windowsHighDpi
+
+# because it wont work in linux and macos
+try:
+    windowsHighDpi()
+except:
+    pass
+
 # pynput
 from pynput.keyboard import Listener as KeyboardListener
 from pynput.mouse import Listener as MouseListener
@@ -35,8 +44,11 @@ def keyboardButtonDown(key):
     # print("SEMAPHORE (Down): ", SEMAPHORE)
     # print("PREV KEY: ", PREV_KEY)
 
-    key = str(key).replace("'", "")
+    key = str(key).replace("'", "").strip()
     filteredKey = filterKeys(key)
+
+    print('key: ', key)
+    print('filtered key: ', filteredKey)
 
     # displaying previous events
     # if(not(presentActionVal.get() == "Let's Start")):
@@ -97,7 +109,11 @@ def keyboardButtonUp(key):
     filteredKey = filterKeys(key)
 
     SEMAPHORE = False
-    PREV_KEY = keyDirectory[filteredKey]
+
+    try:
+        PREV_KEY = keyDirectory[filteredKey]
+    except:
+        PREV_KEY = key
 
     # storing prev value
     if(presentActionVal.get() != ''):
@@ -117,20 +133,18 @@ def mouseButtonPressed(x, y, button, pressed):
         mouseActionVal.set(f'{buttonType.capitalize()} Mouse Button')
 
 # activates on mouse scroll
-
-
-def mouseButtonScrolled(x, y, dx, dy):
+#! not working in windows, dont know about mac
+def mouseScrolled(x, y, dx, dy):
+    print(x, y, dx, dy)
     if(dy == 1):
         mouseActionVal.set('Scroll Up ⬆️')
     else:
         mouseActionVal.set('Scroll Down ⬇️')
 
 # firing up the listeners
-
-
 def listenInputEvents():
     mouseListener = MouseListener(
-        on_click=mouseButtonPressed, on_scroll=mouseButtonScrolled)
+        on_click=mouseButtonPressed, on_scroll=mouseScrolled)
     mouseListener.start()
 
     keyboardListener = KeyboardListener(
@@ -263,6 +277,9 @@ root.overrideredirect(True)
 
 # disabling resizing of the window
 root.resizable(False, False)
+
+# always on top
+root.attributes('-topmost', True)
 
 # size of the window
 root.geometry('{}x{}+{}+{}'.format(app_length, app_height, x_offset, y_offset))

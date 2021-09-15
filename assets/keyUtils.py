@@ -67,9 +67,12 @@ keyDirectory = {
     'Key.shift': 'L Shift ⇧',
     'Key.shift_r': 'R Shift ⇧',
     'Key.ctrl': 'L Ctrl',
+    'Key.ctrl_l': 'L Ctrl',
     'Key.ctrl_r': 'R Ctrl',
     'Key.alt': 'L Alt ⎇',
+    'Key.alt_l': 'L Alt ⎇',
     'Key.alt_r': 'R Alt ⎇',
+    'Key.alt_gr': 'R Alt ⎇',
     'Key.cmd': 'L Super Key',
     'Key.cmd_r': 'R Super Key',
     'Key.menu': 'Menu Key 𝌆',
@@ -154,11 +157,67 @@ keyDirectory = {
     '<65056>': 'Tab',
     '<65437>': '5',
     '<65511>': 'Left Alt',
+    '<96>': '0',
+    '<97>': '1',
+    '<98>': '2',
+    '<99>': '3',
+    '<100>': '4',
+    '<101>': '5',
+    '<102>': '6',
+    '<103>': '7',
+    '<104>': '8',
+    '<105>': '9',
+    '<106>': '*',
+    '<107>': '+',
+    '<109>': '-',
+    '<110>': '.',
+    '<111>': '/',
+    '<186>': ';',
+    '<188>': ',',
+    '<190>': '.',
+    '<191>': '/',
+    '<222>': "'",
+    # other special bindings
+    '\\x01': 'a',
+    '\\x02': 'b',
+    '\\x03': 'c',
+    '\\x04': 'd',
+    '\\x05': 'e',
+    '\\x06': 'f',
+    '\\x07': 'g',
+    '\\x08': 'h',
+    '\\t': 'i',
+    # '\\x10': 'j',
+    '\\n': 'j',
+    '\\x0b': 'k',
+    '\\x0c': 'l',
+    '\\r': 'm',
+    '\\x0e': 'n',
+    '\\x0f': 'o',
+    '\\x10': 'p',
+    '\\x11': 'q',
+    '\\x12': 'r',
+    '\\x13': 's',
+    '\\x14': 't',
+    '\\x15': 'u',
+    '\\x16': 'v',
+    '\\x17': 'w',
+    '\\x18': 'x',
+    '\\x19': 'y',
+    '\\x1a': 'z',
+    '\\x1b': '[',
+    '\\x1d': ']',
 }
 
 
 def filterKeys(key):
     # print('FILTER KEYS CALLED!')
+    if 'f10' in key:
+        return 'Key.f10'
+    if 'f11' in key:
+        return 'Key.f11'
+    if 'f12' in key:
+        return 'Key.f12'
     if 'f1' in key:
         return 'Key.f1'
     if 'f2' in key:
@@ -177,11 +236,5 @@ def filterKeys(key):
         return 'Key.f8'
     if 'f9' in key:
         return 'Key.f9'
-    if 'f10' in key:
-        return 'Key.f10'
-    if 'f11' in key:
-        return 'Key.f11'
-    if 'f12' in key:
-        return 'Key.f12'
 
     return key
