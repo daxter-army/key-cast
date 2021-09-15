@@ -32,10 +32,10 @@ body {
   font-size: larger;
 }
 
-#wrapper {
-  /* border: 1px red solid; */
-  /* margin-top: 50px; */
-}
+/* #wrapper {
+  border: 1px red solid;
+  margin-top: 50px;
+} */
 
 #keycard-container {
   padding: 10px;
@@ -48,9 +48,9 @@ body {
   box-sizing: border-box;
 }
 
-#keycard-container > div {
-  /* border: 1px red solid; */
-}
+/* #keycard-container > div {
+  border: 1px red solid;
+} */
 
 #key-card {
   margin: auto;
@@ -59,9 +59,10 @@ body {
   font-family: dejavuSans;
   color: white;
   background-color: #13274f;
-  /* border: 1px red solid; */
+  border: 2px #13274f solid;
   border-radius: 3px;
   box-sizing: border-box;
+  animation: chamaleon 20s infinite;
 }
 
 #key-card #first-row {
@@ -111,10 +112,11 @@ body {
 }
 
 .download-grid {
+  margin-bottom: 20px;
   display: grid;
   text-align: center;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 
 #sample-video {
@@ -122,6 +124,19 @@ body {
   width: 400;
   position: relative;
   /* border: 1px purple solid; */
+}
+
+.download-btn {
+  margin: 10px auto;
+}
+
+.download-link {
+  text-decoration: none;
+  color: white;
+  /* margin: 10px auto; */
+  background-color: black;
+  padding: 2px 6px;
+  border-radius: 5px;
 }
 
 #video-player {
@@ -146,8 +161,34 @@ body {
   color: white;
 }
 
+#footer {
+  padding: 5px;
+  text-align: center;
+  background-color: #eeeeee;
+}
+
 @media only screen and (max-width: 800px) {
   #keycard-container {
     width: 100%;
+  }
+}
+
+@keyframes chamaleon {
+  0% {
+    color: white;
+    border: 2px #13274f solid;
+    background-color: #13274f;
+  }
+
+  30% {
+    color: #000000;
+    border: 2px white solid;
+    background-color: white;
+  }
+
+  60% {
+    color: black;
+    border: 2px black solid;
+    background-color: white;
   }
 }
