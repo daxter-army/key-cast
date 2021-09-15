@@ -47,8 +47,8 @@ def keyboardButtonDown(key):
     key = str(key).replace("'", "").strip()
     filteredKey = filterKeys(key)
 
-    print('key: ', key)
-    print('filtered key: ', filteredKey)
+    # print('key: ', key)
+    # print('filtered key: ', filteredKey)
 
     # displaying previous events
     # if(not(presentActionVal.get() == "Let's Start")):
@@ -135,7 +135,7 @@ def mouseButtonPressed(x, y, button, pressed):
 # activates on mouse scroll
 #! not working in windows, dont know about mac
 def mouseScrolled(x, y, dx, dy):
-    print(x, y, dx, dy)
+    # print(x, y, dx, dy)
     if(dy == 1):
         mouseActionVal.set('Scroll Up ⬆️')
     else:
@@ -163,8 +163,6 @@ BG_COLOR = '#13274F'
 FONT_COLOR = '#FFFFFF'
 
 # Tkinter functions
-
-
 def quitWindow(*args):
     root.quit()
 
