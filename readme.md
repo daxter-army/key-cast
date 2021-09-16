@@ -39,7 +39,7 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started (Use only)</a>
+      <a href="#getting-started">Getting Started</a>
       <a href="#getting-started">Getting Started (Development)</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -85,7 +85,7 @@ This was achieved with **Python** (cPython), with **Pynput** as global keyboard 
 * [Pyinstaller](https://pyinstaller.readthedocs.io/en/stable/)
 
 <!-- GETTING STARTED -->
-## Getting Started (Use only)
+## Getting Started
 * Go to application [Homepage](https://daxter-army.github.io/key-cast), and download the package as per your OS.
 
 ## Getting Started (Development)
