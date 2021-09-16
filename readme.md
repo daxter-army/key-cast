@@ -9,8 +9,8 @@
 <br/>
 
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/daxter-army/key-cast/">
+    <img src="https://github.com/daxter-army/key-cast/blob/main/assets/icons/logo/keycast_logo_png.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Key Cast</h3>
@@ -119,7 +119,7 @@ This section will help you to get started with the project, locally
 ```sh
     python3 keycast_dev.py
 ```
-* You Done it, you will be seeing a window running on your screen, if everything goes well
+* You have done it, you will be seeing a window running on your screen, if everything goes well.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
