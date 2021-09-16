@@ -71,7 +71,7 @@ Here comes **Keycast**, which enables you to, screen cast your keyboard and mous
 
 * **Cross-platform:** Run it anywhere. Run it on Linux, Windows or OS X.
 * **Keybaord & mouse clicks:** From keyboard presses to mouse clicks, we've covered you all!.
-* **Drag it anywhere:** Obstructing your view, place it anywhere on the screen.
+* **Drag it anywhere:** Obstructing your view? place it anywhere on the screen.
 * **[IN PROGRESS!] Show in style:** Choose from numerous themes, or create your own.
 * **[IN PROGRESS!] Transparency control:** Adjust the transparency level of the panel as per your convenience.
 
