@@ -138,7 +138,9 @@ With console window in the background, in Windows, remove **--windowed** argumen
 ## Usage
 <img src="https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/ui_screenshot.png" width="35%" alt="gui" />
 
-You can use it with any of your fav software while making any tutorial, screen casting your screen.
+You can use it with any of your favourite software while making any tutorial, screen casting your screen, or while streaming your game over the internet.
+
+**More themes coming soon!**
 
 <!-- CONTRIBUTING -->
 <!-- ## Contributing
