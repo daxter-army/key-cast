@@ -64,7 +64,7 @@
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 In this internet age, everyone is learning to stay ahead in their career or to develop something new, creative and fun. Digging the internet for quality tutorials, watching that youtube videos of blender, illustrator, photoshop, webdev and what not. To give back to your community, you also thought of creating some tutorials, but guess what, you are not having any good keyboard and mouse indicators, and that ones which are available in the market, do not suits your personality.
-<br/>
+<br/><br/>
 Here comes **Keycast**, which enables you to, screen cast your keyboard and mouse clicks, while also being pleasant to your eyes and why you should consider Keycast, here's why:
 
 **Cross-platform:** Run it anywhere. Run it on Linux, Windows or OS X.
@@ -108,7 +108,7 @@ This section will help you to get started with the project, locally
     git clone git@github.com:daxter-army/key-cast.git
 ```
 
-* navigate to the project dir and activate virtual env
+* Navigate to the project dir and activate virtual env
 * *for windows*
 ```sh
     .\keycast_env\bin\activate
@@ -127,12 +127,12 @@ This section will help you to get started with the project, locally
 ### Building
 To create one distributable file on linux/OS X, type
 ```sh
-    pyinstaller keycast_onefile.py --onefile --add-data "assets:assets"
+    pyinstaller keycast_prod.py --onefile --add-data "assets:assets"
 ```
 
 With hidden console window, in Windows, type
 ```sh
-    pyinstaller keycast_onefile.py --onefile --add-data "assets:assets" --windowed
+    pyinstaller keycast_prod.py --onefile --add-data "assets:assets" --windowed
 ```
 
 With console window in the background, in Windows, remove **--windowed** argument
