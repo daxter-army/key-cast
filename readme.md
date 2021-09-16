@@ -67,16 +67,16 @@ In this internet age, everyone is learning to stay ahead in their career or to d
 <br/><br/>
 Here comes **Keycast**, which enables you to, screen cast your keyboard and mouse clicks, while also being pleasant to your eyes and why you should consider Keycast, here's why:
 
-**Cross-platform:** Run it anywhere. Run it on Linux, Windows or OS X.
+* **Cross-platform:** Run it anywhere. Run it on Linux, Windows or OS X.
 <br/>
 
-**Keybaord & mouse clicks:** From keyboard presses to mouse clicks, we've covered you all!.
+* **Keybaord & mouse clicks:** From keyboard presses to mouse clicks, we've covered you all!.
 <br/>
 
-**[IN PROGRESS!] Show in style:** Choose from numerous themes, or create your own.
+* **[IN PROGRESS!] Show in style:** Choose from numerous themes, or create your own.
 <br/>
 
-**[IN PROGRESS!] Transparency control:** Adjust the transparency level of the panel as per your convenience.<br/>
+* **[IN PROGRESS!] Transparency control:** Adjust the transparency level of the panel as per your convenience.<br/>
 
 ### Built With
 
