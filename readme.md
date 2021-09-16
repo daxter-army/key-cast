@@ -168,7 +168,7 @@ Project Homepage : [https://daxter-army.github.io/key-cast](https://daxter-army.
 
 ## Acknowledgement
 * [Fontawesome](https://fontawesome.com)
-* [Python](https://getbootstrap.com)
+* [Python](https://python.org)
 * [Tkinter](https://docs.python.org/3/library/tkinter.html)
 * [Pynput](https://pypi.org/project/pynput/)
 * [Pyinstaller](https://pyinstaller.readthedocs.io/en/stable/)
