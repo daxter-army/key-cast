@@ -59,17 +59,24 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-In this internet age, everyone is learning to stay ahead in their career or to develop something new, creative and fun. Digging the internet for quality tutorials, watching that youtube videos of blender, illustrator, photoshop, webdev and what not. To give back to your community, you also thought of creating some tutorials, but guess what, you are not having any good keyboard and mouse indicators, and that ones which are available in the market, do not suits your personality.<br/>
+In this internet age, everyone is learning to stay ahead in their career or to develop something new, creative and fun. Digging the internet for quality tutorials, watching that youtube videos of blender, illustrator, photoshop, webdev and what not. To give back to your community, you also thought of creating some tutorials, but guess what, you are not having any good keyboard and mouse indicators, and that ones which are available in the market, do not suits your personality.
+<br/>
 Here comes **Keycast**, which enables you to, screen cast your keyboard and mouse clicks, while also being pleasant to your eyes and why you should consider Keycast, here's why:
 
-<i class="fas fa-desktop"></i> **Cross-platform:** Run it anywhere. Run it on Linux, Windows or OS X. <br/>
-<i class="far fa-keyboard"></i> **Keybaord & mouse clicks:** From keyboard presses to mouse clicks, we've covered you all!.<br/>
-[Coming Soon!] <i class="fas fa-palette"></i> **Show in style:** Choose from numerous themes, or create your own. <br/>
-[Coming Soon!] <i class="fas fa-sliders-h"></i> **Transparency control:** Adjust the transparency level of the panel as per your convenience.<br/>
+**Cross-platform:** Run it anywhere. Run it on Linux, Windows or OS X.
+<br/>
+
+**Keybaord & mouse clicks:** From keyboard presses to mouse clicks, we've covered you all!.
+<br/>
+
+**[IN PROGRESS!] Show in style:** Choose from numerous themes, or create your own.
+<br/>
+
+**[IN PROGRESS!] Transparency control:** Adjust the transparency level of the panel as per your convenience.<br/>
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This was achieved with **Python** (cPython), with **Pynput** as global keyboard and mouse event listener, **Tkinter** powering the GUI, & **Pyinstaller** for creating distributable package files.
 * [Python](https://getbootstrap.com)
 * [Tkinter](https://docs.python.org/3/library/tkinter.html)
 * [Pynput](https://pypi.org/project/pynput/)
