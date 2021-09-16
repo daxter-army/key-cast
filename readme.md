@@ -53,6 +53,8 @@
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#acknowledgements">Info</a></li>
+    <li><a href="#acknowledgements">Issues</a></li>
   </ol>
 </details>
 
@@ -170,8 +172,14 @@ Project Homepage : [https://daxter-army.github.io/key-cast](https://daxter-army.
 * [Pynput](https://pypi.org/project/pynput/)
 * [Pyinstaller](https://pyinstaller.readthedocs.io/en/stable/)
 
-## Note
-Right now it is heavily under development, and is being developed in linux (ubuntu), can break if you try, because i am working on it to make compatible with all kind of keyboards (because sometimes key codes differ for same key combinations on different OS/PC)
+## Info
+* Right now it is heavily under development, and is being developed in linux (ubuntu). You can see unidentified characters being shown by the software, because sometimes different key combos having different key codes, I am working on this to support as many as keyboards and key combos possible.
+
+* **windows_bundle** directory contains bundled package for windows, same is the case with **linux_bundle**, bundle to be created for mac OS X.
+
+* The main file that runs is **/dist/keycast_prod.exe**, these are also the files that are available on the homepage to be downloaded.
+
+* For development use, **keycast_dev.py**, then copy-paste the whole code to **keycast_prod.py**, and also paste the code of additional files in that file also, to increase the performance.
 
 ## Issues
 Visit Issues tab
