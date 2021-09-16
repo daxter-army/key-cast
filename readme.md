@@ -160,7 +160,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
-Mehul Singh Teya - mehulsinghteya@gmail.com
+Mehul Singh Teya - mehulsinghteya@gmail.com | [LinkedIn](https://linkedin.com/in/mehulsinghteya)
 <br/>
 Project Link: [https://github.com/daxter-army/key-cast](https://github.com/daxter-army/key-cast)
 <br/>
