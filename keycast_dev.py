@@ -1,7 +1,7 @@
 # tkinter
 import tkinter as tk
 from tkinter import ttk
-import tkinter.font as font
+# import tkinter.font as font
 
 # for windows
 from assets.windowsHighDpi import windowsHighDpi
@@ -18,6 +18,7 @@ from pynput.mouse import Listener as MouseListener
 
 # utility file
 from assets.keyUtils import keyDirectory, filterKeys
+from assets.envValues import ENV_VALUES
 
 # initialising tkinter
 root = tk.Tk()
@@ -25,6 +26,9 @@ root.columnconfigure(0, weight=1)
 previousActionVal = tk.StringVar(value="Previous Action")
 presentActionVal = tk.StringVar(value="Current Action")
 mouseActionVal = tk.StringVar(value="Mouse Action")
+
+lastClickX = 0
+lastClickY = 0
 
 # ? ---- BACKEND
 # event listeners
@@ -134,8 +138,6 @@ def mouseButtonPressed(x, y, button, pressed):
 
 # activates on mouse scroll
 #! not working in windows, dont know about mac
-
-
 def mouseScrolled(x, y, dx, dy):
     # print(x, y, dx, dy)
     if(dy == 1):
@@ -144,8 +146,6 @@ def mouseScrolled(x, y, dx, dy):
         mouseActionVal.set('Scroll Down ⬇️')
 
 # firing up the listeners
-
-
 def listenInputEvents():
     mouseListener = MouseListener(
         on_click=mouseButtonPressed, on_scroll=mouseScrolled)
@@ -154,6 +154,17 @@ def listenInputEvents():
     keyboardListener = KeyboardListener(
         on_press=keyboardButtonDown, on_release=keyboardButtonUp)
     keyboardListener.start()
+
+# move windows
+def saveLastClickPos(event):
+    global lastClickX, lastClickY
+    lastClickX = event.x
+    lastClickY = event.y
+
+def newPosition(event):
+    x = event.x - lastClickX + root.winfo_x()
+    y = event.y - lastClickY + root.winfo_y()
+    root.geometry(f'+{x}+{y}')
 
 # ? ----
 
@@ -174,31 +185,31 @@ def quitWindow(*args):
 
 # ? ---- FOR LINUX (TRANSPARENT WINDOW)
 # root.wait_visibility(root)
-# root.wm_attributes('-alpha', ALPHA_VALUE)
+# root.wm_attributes('-alpha', ENV_VALUES['ALPHA_VALUE'])
 # ? -----
 
 
 # setting font
-# font.nametofont(FONT_NAME)).configure(size=12)
+# font.nametofont(ENV_VALUES['FONT_NAME'])).configure(size=12)
 
 
 # ? ---- GUI ELEMENTS
 # frames
-first_frame = tk.Frame(root, background=BG_COLOR)
+first_frame = tk.Frame(root, background=ENV_VALUES['BG_COLOR'])
 first_frame.pack(side="top", fill="both", expand=True)
 
-second_frame = tk.Frame(root, background=BG_COLOR)
+second_frame = tk.Frame(root, background=ENV_VALUES['BG_COLOR'])
 second_frame.pack(side="top", fill="both", expand=True)
 
-third_frame = tk.Frame(root, background=BG_COLOR)
+third_frame = tk.Frame(root, background=ENV_VALUES['BG_COLOR'])
 third_frame.pack(side="top", fill="both", expand=True)
 
 # previous action label
 label1 = tk.Label(
     first_frame,
     textvariable=previousActionVal,
-    bg=BG_COLOR,
-    foreground=FONT_COLOR,
+    bg=ENV_VALUES['BG_COLOR'],
+    foreground=ENV_VALUES['FONT_COLOR'],
     anchor='w'
 )
 label1.pack(
@@ -215,10 +226,10 @@ button_quit = tk.Button(
     first_frame,
     image=cross_btn_image,
     command=quitWindow,
-    bg=BG_COLOR,
-    foreground=FONT_COLOR,
-    highlightbackground=BG_COLOR,
-    activebackground=BG_COLOR,
+    bg=ENV_VALUES['BG_COLOR'],
+    foreground=ENV_VALUES['FONT_COLOR'],
+    highlightbackground=ENV_VALUES['BG_COLOR'],
+    activebackground=ENV_VALUES['BG_COLOR'],
     borderwidth=0,
     cursor="hand2"
 )
@@ -236,9 +247,9 @@ button_quit.pack(
 label3 = tk.Label(
     second_frame,
     textvariable=presentActionVal,
-    bg=BG_COLOR,
-    foreground=FONT_COLOR,
-    font=('TkinterDefault', 16),
+    bg=ENV_VALUES['BG_COLOR'],
+    foreground=ENV_VALUES['FONT_COLOR'],
+    font=(ENV_VALUES['FONT_NAME'], 16),
     anchor='w'
 )
 label3.pack(
@@ -255,8 +266,8 @@ label3.pack(
 mouse_action_label = tk.Label(
     third_frame,
     textvariable=mouseActionVal,
-    bg=BG_COLOR,
-    foreground=FONT_COLOR,
+    bg=ENV_VALUES['BG_COLOR'],
+    foreground=ENV_VALUES['FONT_COLOR'],
     anchor='w'
 )
 mouse_action_label.pack(
@@ -269,9 +280,6 @@ mouse_action_label.pack(
 # ?---- CONFIGURING TKINTER
 screen_length = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
-
-app_length = 350
-app_height = 130
 
 x_offset = int(screen_length - screen_length*0.21)
 y_offset = int(screen_height - screen_height*0.18)
@@ -286,11 +294,15 @@ root.resizable(False, False)
 root.attributes('-topmost', True)
 
 # size of the window
-root.geometry('{}x{}+{}+{}'.format(app_length, app_height, x_offset, y_offset))
+root.geometry('{}x{}+{}+{}'.format(ENV_VALUES['APP_WIDTH'], ENV_VALUES['APP_HEIGHT'], x_offset, y_offset))
 # ?----
 
 # firing event listeners
 listenInputEvents()
+
+# binding mouse events for dragging window
+root.bind('<Button-1>', saveLastClickPos)
+root.bind('<B1-Motion>', newPosition)
 
 # firing tkinter's event loop
 root.mainloop()
