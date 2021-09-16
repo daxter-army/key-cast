@@ -86,7 +86,7 @@ This was achieved with **Python** (cPython), with **Pynput** as global keyboard 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-* Go to application [Homepage](https://daxter-army.github.io/key-cast), and download the package as per your OS.
+* You do not need Python installed to use this app, just go to the application [Homepage](https://daxter-army.github.io/key-cast), and download the package as per your OS.
 
 ## Getting Started (Development)
 
