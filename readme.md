@@ -136,7 +136,7 @@ With console window in the background, in Windows, remove **--windowed** argumen
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-![Keycast Gui](https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/ui_screenshot.png)
+<img src="https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/ui_screenshot.png" width="75%" alt="gui" />
 
 <!-- CONTRIBUTING -->
 <!-- ## Contributing
