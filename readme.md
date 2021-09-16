@@ -39,6 +39,7 @@
       </ul>
     </li>
     <li>
+      <a href="#getting-started">Getting Started (Use only)</a>
       <a href="#getting-started">Getting Started (Development)</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -82,17 +83,47 @@ This was achieved with **Python** (cPython), with **Pynput** as global keyboard 
 * [Pynput](https://pypi.org/project/pynput/)
 * [Pyinstaller](https://pyinstaller.readthedocs.io/en/stable/)
 
+<!-- GETTING STARTED -->
+## Getting Started (Use only)
+* Go to application [Homepage](https://daxter-army.github.io/key-cast), and download the package as per your OS.
+
+## Getting Started (Development)
+
+This section will help you to get started with the project, locally
+
+## Prerequistes
+* You should be having Python version > 3.6.x
+* Install the requirements from **REQUIREMENTS.txt** file via **pip** before actually running the application, with
+```python
+    pip3 install -r REQUIREMENTS.txt
+```
+
+### Installation
+
+* Clone the project locally with
+```sh
+    git clone git@github.com:daxter-army/key-cast.git
+```
+
+* navigate to the project dir and activate virtual env
+* *for windows*
+```sh
+    .\keycast_env\bin\activate
+```
+* *for linux/OS X*
+```sh
+    source .\keycast_env\bin\activate
+```
+
+* Now you'll see that virtual env has been activated, after this hit
+```sh
+    python3 keycast_dev.py
+```
+* You Done it, you will be seeing a window running on your screen, if everything goes well
+
 <!-- USAGE EXAMPLES -->
-<!-- ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_ -->
-
-<!-- ROADMAP -->
-<!-- ## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues). -->
+## Usage
+Screenshots and Demos coming soon!
 
 <!-- CONTRIBUTING -->
 <!-- ## Contributing
@@ -107,43 +138,26 @@ Contributions are what make the open source community such an amazing place to l
 
 <!-- LICENSE -->
 ## License
-
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
 
 <!-- CONTACT -->
 ## Contact
-
 Mehul Singh Teya - mehulsinghteya@gmail.com
-
 Project Link: [https://github.com/daxter-army/key-cast](https://github.com/daxter-army/key-cast)
 <br/>
 Project Homepage : [https://daxter-army.github.io/key-cast](https://daxter-army.github.io/key-cast)
 
+## Acknowledgement
+* [Fontawesome](https://fontawesome.com)
+* [Python](https://getbootstrap.com)
+* [Tkinter](https://docs.python.org/3/library/tkinter.html)
+* [Pynput](https://pypi.org/project/pynput/)
+* [Pyinstaller](https://pyinstaller.readthedocs.io/en/stable/)
 
-# Run
-
-**for development purpose**
-
-- activate virtual env by opening the terminal in the project dir -> `source ./keycast_env/bin/activate`
-
-- then run -> `pip3 install -r requirements.txt`
-
-- open terminal in the project dir and run -> `python3 keycast_gui.py`
-
-**for testing purposes**
-
-- open terminal in the project dir and run -> `python3 keycast_gui.py`
-
-# Tech Stack
-
-Made with Pyton's Tkinter
-
-# Note
-
+## Note
 Right now it is heavily under development, and is being developed in linux (ubuntu), can break if you try, because i am working on it to make compatible with all kind of keyboards (because sometimes key codes differ for same key combinations on different OS/PC)
 
-# Issues
-* Scrolling event not working in windows
-* testing pending in OS X
+## Issues
+Visit Issues tab
+<br/>
+<a href="https://github.com/daxter-army/key-cast/issues/1">Issues</a>
