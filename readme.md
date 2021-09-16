@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/daxter-army/key-cast/">
-    <img src="https://github.com/daxter-army/key-cast/blob/main/assets/icons/logo/keycast_logo_png.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/daxter-army/key-cast/blob/main/assets/icons/logo/keycast_logo_png.png" alt="Logo">
   </a>
 
   <h3 align="center">Key Cast</h3>
