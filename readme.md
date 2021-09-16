@@ -44,7 +44,7 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#installation">Building</a></li>
+        <li><a href="#building">Building</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -53,8 +53,8 @@
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
-    <li><a href="#acknowledgements">Info</a></li>
-    <li><a href="#acknowledgements">Issues</a></li>
+    <li><a href="#info">Info</a></li>
+    <li><a href="#issues">Issues</a></li>
   </ol>
 </details>
 
