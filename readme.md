@@ -33,7 +33,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">Introduction</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -59,7 +59,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Introduction
 
 <p align="center">
 <img src="https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/keycast_demo_gif_2.gif" width="75%" alt="Keycast in action"/>
