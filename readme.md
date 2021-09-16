@@ -44,11 +44,12 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Building</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <!-- <li><a href="#roadmap">Roadmap</a></li> -->
+    <!-- <li><a href="#contributing">Contributing</a></li> -->
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -120,6 +121,20 @@ This section will help you to get started with the project, locally
     python3 keycast_dev.py
 ```
 * You have done it, you will be seeing a window running on your screen, if everything goes well.
+
+### Building
+To create one distributable file on linux/OS X, type
+```sh
+    pyinstaller keycast_onefile.py --onefile --add-data "assets:assets"
+```
+
+With hidden console window, in Windows, type
+```sh
+    pyinstaller keycast_onefile.py --onefile --add-data "assets:assets" --windowed
+```
+
+With console window in the background, in Windows, remove **--windowed** argument
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
