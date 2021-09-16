@@ -61,7 +61,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/keycast_demo_gif.gif" width="50%"/>
+<img src="https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/keycast_demo_gif.gif" width="75%"/>
 
 ![Keycast demonstration](https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/keycast_demo_gif.gif)
 
