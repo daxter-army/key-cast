@@ -32,10 +32,17 @@ body {
   font-size: larger;
 }
 
-/* #wrapper {
-  border: 1px red solid;
-  margin-top: 50px;
-} */
+#wrapper {
+  /* border: 1px red solid;
+  margin-top: 50px; */
+  position: relative;
+}
+
+#github-logo {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
 
 #keycard-container {
   padding: 10px;

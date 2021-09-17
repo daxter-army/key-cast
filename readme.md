@@ -80,7 +80,7 @@ Here comes **Keycast**, which enables you to, screen cast your keyboard and mous
 
 This was achieved with **Python** (cPython), with **Pynput** as global keyboard and mouse event listener, **Tkinter** powering the GUI, & **Pyinstaller** for creating distributable package files.
 
-- [Python](https://getbootstrap.com)
+- [Python](https://python.org)
 - [Tkinter](https://docs.python.org/3/library/tkinter.html)
 - [Pynput](https://pypi.org/project/pynput/)
 - [Pyinstaller](https://pyinstaller.readthedocs.io/en/stable/)
@@ -93,7 +93,7 @@ This was achieved with **Python** (cPython), with **Pynput** as global keyboard 
 
 **For Linux/OS X users only**
 
-- After downloading the file, open the settings of the file, go to permissions tab and check the option saying **allow executing file as program**, and then run the file, now it would run smoothly.
+- After downloading the file, open the properties of the file, go to permissions tab and check the option saying **allow executing file as program**, and then run the file, now it would run smoothly.
 
 ## Getting Started (Development)
 
@@ -212,4 +212,4 @@ Project Homepage : [https://daxter-army.github.io/key-cast](https://daxter-army.
 
 Visit Issues tab
 <br/>
-<a href="https://github.com/daxter-army/key-cast/issues/1">Issues</a>
+<a href="https://github.com/daxter-army/key-cast/issues">Issues</a>
