@@ -93,7 +93,7 @@ This was achieved with **Python** (cPython), with **Pynput** as global keyboard 
 
 **For Linux/OS X users only**
 
-- After downloading the file, open the settings of the file, go to permissions tab and check the option saying _allow executing file as program_, and then run the file, now it would run smoothly.
+- After downloading the file, open the settings of the file, go to permissions tab and check the option saying **allow executing file as program**, and then run the file, now it would run smoothly.
 
 ## Getting Started (Development)
 
