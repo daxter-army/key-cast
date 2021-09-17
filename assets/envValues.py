@@ -1,4 +1,7 @@
+import platform
+
 ENV_VALUES = {
+    'PLATFORM': platform.system().lower(),
     'APP_WIDTH': 380,
     'APP_HEIGHT': 140,
     'FONT_NAME': 'TkDefaultFont',

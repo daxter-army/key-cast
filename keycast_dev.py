@@ -1,4 +1,8 @@
 # tkinter
+from assets.envValues import ENV_VALUES
+from assets.keyUtils import keyDirectory, filterKeys
+from pynput.mouse import Listener as MouseListener
+from pynput.keyboard import Listener as KeyboardListener
 import tkinter as tk
 from tkinter import ttk
 # import tkinter.font as font
@@ -12,14 +16,6 @@ try:
 except:
     pass
 
-# pynput
-from pynput.keyboard import Listener as KeyboardListener
-from pynput.mouse import Listener as MouseListener
-
-# utility file
-from assets.keyUtils import keyDirectory, filterKeys
-from assets.envValues import ENV_VALUES
-
 # initialising tkinter
 root = tk.Tk()
 root.columnconfigure(0, weight=1)
@@ -29,6 +25,9 @@ mouseActionVal = tk.StringVar(value="Mouse Action")
 
 lastClickX = 0
 lastClickY = 0
+
+xOffset = 0
+yOffset = 0
 
 # ? ---- BACKEND
 # event listeners
@@ -138,6 +137,8 @@ def mouseButtonPressed(x, y, button, pressed):
 
 # activates on mouse scroll
 #! not working in windows, dont know about mac
+
+
 def mouseScrolled(x, y, dx, dy):
     # print(x, y, dx, dy)
     if(dy == 1):
@@ -146,6 +147,8 @@ def mouseScrolled(x, y, dx, dy):
         mouseActionVal.set('Scroll Down ⬇️')
 
 # firing up the listeners
+
+
 def listenInputEvents():
     mouseListener = MouseListener(
         on_click=mouseButtonPressed, on_scroll=mouseScrolled)
@@ -156,10 +159,13 @@ def listenInputEvents():
     keyboardListener.start()
 
 # move windows
+
+
 def saveLastClickPos(event):
     global lastClickX, lastClickY
     lastClickX = event.x
     lastClickY = event.y
+
 
 def newPosition(event):
     x = event.x - lastClickX + root.winfo_x()
@@ -281,8 +287,15 @@ mouse_action_label.pack(
 screen_length = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 
-x_offset = int(screen_length - screen_length*0.21)
-y_offset = int(screen_height - screen_height*0.18)
+# setting up offsets wrt to platform
+if ENV_VALUES['PLATFORM'] == 'windows':
+    # global xOffset, yOffset
+    xOffset = int(screen_length - screen_length*0.21)
+    yOffset = int(screen_height - screen_height*0.21)
+else:
+    # global xOffset, yOffset
+    xOffset = int(screen_length - screen_length*0.23)
+    yOffset = int(screen_height - screen_height*0.18)
 
 # headless window
 root.overrideredirect(True)
@@ -294,7 +307,8 @@ root.resizable(False, False)
 root.attributes('-topmost', True)
 
 # size of the window
-root.geometry('{}x{}+{}+{}'.format(ENV_VALUES['APP_WIDTH'], ENV_VALUES['APP_HEIGHT'], x_offset, y_offset))
+root.geometry(
+    '{}x{}+{}+{}'.format(ENV_VALUES['APP_WIDTH'], ENV_VALUES['APP_HEIGHT'], xOffset, yOffset))
 # ?----
 
 # firing event listeners
