@@ -59,6 +59,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## Introduction
 
 <p align="center">
@@ -69,74 +70,93 @@ In this internet age, everyone is learning to stay ahead in their career or to d
 <br/><br/>
 Here comes **Keycast**, which enables you to, screen cast your keyboard and mouse clicks, while also being pleasant to your eyes and why you should consider Keycast, here's why:
 
-* **Cross-platform:** Run it anywhere. Run it on Linux, Windows or OS X.
-* **Keybaord & mouse clicks:** From keyboard presses to mouse clicks, we've covered you all!.
-* **Drag it anywhere:** Obstructing your view? place it anywhere on the screen.
-* **[IN PROGRESS!] Show in style:** Choose from numerous themes, or create your own.
-* **[IN PROGRESS!] Transparency control:** Adjust the transparency level of the panel as per your convenience.
+- **Cross-platform:** Run it anywhere. Run it on Linux, Windows or OS X.
+- **Keybaord & mouse clicks:** From keyboard presses to mouse clicks, we've covered you all!.
+- **Drag it anywhere:** Obstructing your view? place it anywhere on the screen.
+- **[IN PROGRESS!] Show in style:** Choose from numerous themes, or create your own.
+- **[IN PROGRESS!] Transparency control:** Adjust the transparency level of the panel as per your convenience.
 
 ### Built With
 
 This was achieved with **Python** (cPython), with **Pynput** as global keyboard and mouse event listener, **Tkinter** powering the GUI, & **Pyinstaller** for creating distributable package files.
-* [Python](https://getbootstrap.com)
-* [Tkinter](https://docs.python.org/3/library/tkinter.html)
-* [Pynput](https://pypi.org/project/pynput/)
-* [Pyinstaller](https://pyinstaller.readthedocs.io/en/stable/)
+
+- [Python](https://getbootstrap.com)
+- [Tkinter](https://docs.python.org/3/library/tkinter.html)
+- [Pynput](https://pypi.org/project/pynput/)
+- [Pyinstaller](https://pyinstaller.readthedocs.io/en/stable/)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
-* You do not need Python installed to use this app, just go to the application [Homepage](https://daxter-army.github.io/key-cast), and download the package as per your OS.
+
+- You do not need Python installed to use this app, just go to the application [Homepage](https://daxter-army.github.io/key-cast), and download the package as per your OS.
+
+**For Linux/OS X users only**
+
+- After downloading the file, open the settings of the file, go to permissions tab and check the option saying _allow executing file as program_, and then run the file, now it would run smoothly.
 
 ## Getting Started (Development)
 
 This section will help you to get started with the project, locally
 
 ## Prerequistes
-* You should be having Python version > 3.6.x
-* Install the requirements from **REQUIREMENTS.txt** file via **pip** before actually running the application, with
+
+- You should be having Python version > 3.6.x
+- Install the requirements from **REQUIREMENTS.txt** file via **pip** before actually running the application, with
+
 ```python
     pip3 install -r REQUIREMENTS.txt
 ```
 
 ### Installation
 
-* Clone the project locally with
+- Clone the project locally with
+
 ```sh
     git clone git@github.com:daxter-army/key-cast.git
 ```
 
-* Navigate to the project dir and activate virtual env
-* *for windows*
+- Navigate to the project dir and activate virtual env
+- _for windows_
+
 ```sh
     .\keycast_env\bin\activate
 ```
-* *for linux/OS X*
+
+- _for linux/OS X_
+
 ```sh
     source .\keycast_env\bin\activate
 ```
 
-* Now you'll see that virtual env has been activated, after this hit
+- Now you'll see that virtual env has been activated, after this hit
+
 ```sh
     python3 keycast_dev.py
 ```
-* You have done it, you will be seeing a window running on your screen, if everything goes well.
+
+- You have done it, you will be seeing a window running on your screen, if everything goes well.
 
 ### Building
+
 To create one distributable file on linux/OS X, type
+
 ```sh
     pyinstaller keycast_prod.py --onefile --add-data "assets:assets"
 ```
 
 With hidden console window, in Windows, type
+
 ```sh
     pyinstaller keycast_prod.py --onefile --add-data "assets:assets" --windowed
 ```
 
 With console window in the background, in Windows, remove **--windowed** argument
 
-
 <!-- USAGE EXAMPLES -->
+
 ## Usage
+
 <img src="https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/ui_screenshot.png" width="35%" alt="gui" />
 
 You can use it with any of your favourite software while making any tutorial, screen casting your screen, or while streaming your game over the internet.
@@ -155,11 +175,15 @@ Contributions are what make the open source community such an amazing place to l
 5. Open a Pull Request -->
 
 <!-- LICENSE -->
+
 ## License
+
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
+
 ## Contact
+
 Mehul Singh Teya - mehulsinghteya@gmail.com | [LinkedIn](https://linkedin.com/in/mehulsinghteya)
 <br/>
 Project Link: [https://github.com/daxter-army/key-cast](https://github.com/daxter-army/key-cast)
@@ -167,22 +191,25 @@ Project Link: [https://github.com/daxter-army/key-cast](https://github.com/daxte
 Project Homepage : [https://daxter-army.github.io/key-cast](https://daxter-army.github.io/key-cast)
 
 ## Acknowledgement
-* [Fontawesome](https://fontawesome.com)
-* [Python](https://python.org)
-* [Tkinter](https://docs.python.org/3/library/tkinter.html)
-* [Pynput](https://pypi.org/project/pynput/)
-* [Pyinstaller](https://pyinstaller.readthedocs.io/en/stable/)
+
+- [Fontawesome](https://fontawesome.com)
+- [Python](https://python.org)
+- [Tkinter](https://docs.python.org/3/library/tkinter.html)
+- [Pynput](https://pypi.org/project/pynput/)
+- [Pyinstaller](https://pyinstaller.readthedocs.io/en/stable/)
 
 ## Info
-* Right now it is heavily under development, and is being developed in linux (ubuntu). You can see unidentified characters being shown by the software, because sometimes different key combos having different key codes, I am working on this to support as many as keyboards and key combos possible.
 
-* **windows_bundle** directory contains bundled package for windows, same is the case with **linux_bundle**, bundle to be created for mac OS X.
+- Right now it is heavily under development, and is being developed in linux (ubuntu). You can see unidentified characters being shown by the software, because sometimes different key combos having different key codes, I am working on this to support as many as keyboards and key combos possible.
 
-* The main file that runs is **/dist/keycast_prod.exe**, these are also the files that are available on the homepage to be downloaded.
+- **windows_bundle** directory contains bundled package for windows, same is the case with **linux_bundle**, bundle to be created for mac OS X.
 
-* For development use, **keycast_dev.py**, then copy-paste the whole code to **keycast_prod.py**, and also paste the code of additional files in that file also, to increase the performance.
+- The main file that runs is **/dist/keycast_prod.exe**, these are also the files that are available on the homepage to be downloaded.
+
+- For development use, **keycast_dev.py**, then copy-paste the whole code to **keycast_prod.py**, and also paste the code of additional files in that file also, to increase the performance.
 
 ## Issues
+
 Visit Issues tab
 <br/>
 <a href="https://github.com/daxter-army/key-cast/issues/1">Issues</a>
