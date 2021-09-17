@@ -168,9 +168,11 @@ def saveLastClickPos(event):
 
 
 def newPosition(event):
+    print('fired')
     x = event.x - lastClickX + root.winfo_x()
+    Xpos = int(root.winfo_screenwidth() - ENV_VALUES['APP_WIDTH'])
     y = event.y - lastClickY + root.winfo_y()
-    root.geometry(f'+{x}+{y}')
+    root.geometry(f'+{Xpos}+{y}')
 
 # ? ----
 
@@ -288,14 +290,14 @@ screen_length = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 
 # setting up offsets wrt to platform
-if ENV_VALUES['PLATFORM'] == 'windows':
+if ENV_VALUES['PLATFORM'] != 'windows':
     # global xOffset, yOffset
-    xOffset = int(screen_length - screen_length*0.21)
-    yOffset = int(screen_height - screen_height*0.21)
+    xOffset = int(screen_length - ENV_VALUES['APP_WIDTH']*1.1)
+    yOffset = int(screen_height - ENV_VALUES['APP_HEIGHT']*1.7)
 else:
     # global xOffset, yOffset
-    xOffset = int(screen_length - screen_length*0.23)
-    yOffset = int(screen_height - screen_height*0.18)
+    xOffset = int(screen_length - ENV_VALUES['APP_WIDTH']*1.1)
+    yOffset = int(screen_height - ENV_VALUES['APP_HEIGHT']*1.3)
 
 # headless window
 root.overrideredirect(True)
