@@ -23,6 +23,9 @@ previousActionVal = tk.StringVar(value="Previous Action")
 presentActionVal = tk.StringVar(value="Current Action")
 mouseActionVal = tk.StringVar(value="Mouse Action")
 
+screen_length = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
 lastClickX = 0
 lastClickY = 0
 
@@ -168,11 +171,25 @@ def saveLastClickPos(event):
 
 
 def newPosition(event):
-    print('fired')
     x = event.x - lastClickX + root.winfo_x()
-    Xpos = int(root.winfo_screenwidth() - ENV_VALUES['APP_WIDTH'])
     y = event.y - lastClickY + root.winfo_y()
-    root.geometry(f'+{Xpos}+{y}')
+
+    print('x: ', x, 'y: ', y)
+
+    # if x > screen_length*0.5 and y < screen_height*0.5:
+    #     print('1st Q')
+    #     root.geometry(f'+{x}+{y}')
+    # elif x < screen_length*0.5 and y < screen_height*0.5:
+    #     print('2nd Q')
+    #     root.geometry(f'+{x}+{y}')
+    # elif x < screen_length*0.5 and y > screen_height*0.5:
+    #     print('3rd Q')
+    #     root.geometry('+{}+{}'.format(40, int(screen_height*0.85)))
+    # else:
+    #     print('4th Q')
+
+    root.geometry(f'+{x}+{y}')
+
 
 # ? ----
 
@@ -286,11 +303,9 @@ mouse_action_label.pack(
 )
 
 # ?---- CONFIGURING TKINTER
-screen_length = root.winfo_screenwidth()
-screen_height = root.winfo_screenheight()
 
 # setting up offsets wrt to platform
-if ENV_VALUES['PLATFORM'] != 'windows':
+if ENV_VALUES['PLATFORM'] == 'windows':
     # global xOffset, yOffset
     xOffset = int(screen_length - ENV_VALUES['APP_WIDTH']*1.1)
     yOffset = int(screen_height - ENV_VALUES['APP_HEIGHT']*1.7)
