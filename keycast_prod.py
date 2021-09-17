@@ -20,100 +20,39 @@ try:
 except:
     pass
 
+ENV_VALUES = {
+    'APP_WIDTH': 380,
+    'APP_HEIGHT': 140,
+    'FONT_NAME': 'TkDefaultFont',
+    'FONT_COLOR': '#FFFFFF',
+    'BG_COLOR': '#13274F',
+    'ALPHA_VALUE': 0.8,
+}
+
 keyDirectory = {
     # small alphabets
-    'a': 'a',
-    'b': 'b',
-    'c': 'c',
-    'd': 'd',
-    'e': 'e',
-    'f': 'f',
-    'g': 'g',
-    'h': 'h',
-    'i': 'i',
-    'j': 'j',
-    'k': 'k',
-    'l': 'l',
-    'm': 'm',
-    'n': 'n',
-    'o': 'o',
-    'p': 'p',
-    'q': 'q',
-    'r': 'r',
-    's': 's',
-    't': 't',
-    'u': 'u',
-    'v': 'v',
-    'w': 'w',
-    'x': 'x',
-    'y': 'y',
-    'z': 'z',
+    'a': 'a', 'b': 'b', 'c': 'c', 'd': 'd', 'e': 'e', 'f': 'f', 'g': 'g', 'h': 'h', 'i': 'i',
+    'j': 'j', 'k': 'k', 'l': 'l', 'm': 'm', 'n': 'n', 'o': 'o', 'p': 'p', 'q': 'q', 'r': 'r',
+    's': 's', 't': 't', 'u': 'u', 'v': 'v', 'w': 'w', 'x': 'x', 'y': 'y', 'z': 'z',
     # big alphabets
-    'A': 'A',
-    'B': 'B',
-    'C': 'C',
-    'D': 'D',
-    'E': 'E',
-    'F': 'F',
-    'G': 'G',
-    'H': 'H',
-    'I': 'I',
-    'J': 'J',
-    'K': 'K',
-    'L': 'L',
-    'M': 'M',
-    'N': 'N',
-    'O': 'O',
-    'P': 'P',
-    'Q': 'Q',
-    'R': 'R',
-    'S': 'S',
-    'T': 'T',
-    'U': 'U',
-    'V': 'V',
-    'W': 'W',
-    'X': 'X',
-    'Y': 'Y',
-    'Z': 'Z',
+    'A': 'A', 'B': 'B', 'C': 'C', 'D': 'D',
+    'E': 'E', 'F': 'F', 'G': 'G', 'H': 'H',
+    'I': 'I', 'J': 'J', 'K': 'K', 'L': 'L',
+    'M': 'M', 'N': 'N', 'O': 'O', 'P': 'P',
+    'Q': 'Q', 'R': 'R', 'S': 'S', 'T': 'T',
+    'U': 'U', 'V': 'V', 'W': 'W', 'X': 'X',
+    'Y': 'Y', 'Z': 'Z',
     # Arrows
-    'Key.up': 'Up ⬆️',
-    'Key.down': 'Down ⬇️',
-    'Key.left': 'Left ⬅️',
-    'Key.right': 'Right ➡️',
+    'Key.up': 'Up ⬆️', 'Key.down': 'Down ⬇️', 'Key.left': 'Left ⬅️', 'Key.right': 'Right ➡️',
     # Operation Keys
-    'Key.esc': 'Escape',
-    'Key.space': 'Space',
-    'Key.enter': 'Enter ↵',
-    'Key.backspace': 'Backspace ⌫',
-    'Key.tab': 'Tab ↹',
-    'Key.shift': 'L Shift ⇧',
-    'Key.shift_r': 'R Shift ⇧',
-    'Key.ctrl': 'L Ctrl',
-    'Key.ctrl_l': 'L Ctrl',
-    'Key.ctrl_r': 'R Ctrl',
-    'Key.alt': 'L Alt ⎇',
-    'Key.alt_l': 'L Alt ⎇',
-    'Key.alt_r': 'R Alt ⎇',
-    'Key.alt_gr': 'R Alt ⎇',
-    'Key.cmd': 'L Super Key',
-    'Key.cmd_r': 'R Super Key',
-    'Key.menu': 'Menu Key 𝌆',
+    'Key.esc': 'Escape', 'Key.space': 'Space', 'Key.enter': 'Enter ↵', 'Key.backspace': 'Backspace ⌫', 'Key.tab': 'Tab ↹', 'Key.shift': 'L Shift ⇧', 'Key.shift_r': 'R Shift ⇧',
+    'Key.ctrl': 'L Ctrl', 'Key.ctrl_l': 'L Ctrl', 'Key.ctrl_r': 'R Ctrl', 'Key.alt': 'L Alt ⎇', 'Key.alt_l': 'L Alt ⎇', 'Key.alt_r': 'R Alt ⎇', 'Key.alt_gr': 'R Alt ⎇',
+    'Key.cmd': 'L Super Key', 'Key.cmd_r': 'R Super Key', 'Key.menu': 'Menu Key 𝌆',
     # Locks
-    'Key.caps_lock': 'Caps Lock Toggle',
-    'Key.num_lock': 'Num Lock Toggle',
+    'Key.caps_lock': 'Caps Lock Toggle', 'Key.num_lock': 'Num Lock Toggle',
     # Function Keys
-    'Key.f1': 'F1',
-    'Key.f2': 'F2',
-    'Key.f3': 'F3',
-    'Key.f4': 'F4',
-    'Key.f5': 'F5',
-    'Key.f6': 'F6',
-    'Key.f7': 'F7',
-    'Key.f8': 'F8',
-    'Key.f9': 'F9',
-    'Key.f10': 'F10',
-    'Key.f11': 'F11',
-    'Key.f12': 'F12',
+    'Key.f1': 'F1', 'Key.f2': 'F2', 'Key.f3': 'F3', 'Key.f4': 'F4', 'Key.f5': 'F5', 'Key.f6': 'F6',
+    'Key.f7': 'F7', 'Key.f8': 'F8', 'Key.f9': 'F9', 'Key.f10': 'F10', 'Key.f11': 'F11', 'Key.f12': 'F12',
     # Other Functions
     'Key.print_screen': 'Print Screen',
     'Key.scroll_lock': 'Scroll Lock',
@@ -128,107 +67,26 @@ keyDirectory = {
     'Key.media_volume_down': 'Volume Down',
     'Key.media_volume_mute': 'Volume Mute/Unmute',
     # Special Characters
-    '`': '`',
-    '~': '~',
-    '!': '!',
-    '@': '@',
-    '#': '#',
-    '$': '$',
-    '%': '%',
-    '^': '^',
-    '&': '&',
-    '*': '*',
-    '(': '(',
-    ')': ')',
-    '-': '-',
-    '_': '_',
-    '=': '=',
-    '+': '+',
-    '[': '[',
-    '{': '{',
-    ']': ']',
-    '}': '}',
-    '\\\\': '\\',
-    '|': '|',
-    ';': ';',
-    ':': ':',
-    "'": "'",
-    '"': '"',
-    "''": "'",
-    '""': '"',
-    ',': ',',
-    '<': '<',
-    '.': '.',
-    '>': '>',
-    '?': '?',
-    '/': '/',
-    '/': '/',
-    '*': '*',
+    '`': '`', '~': '~', '!': '!', '@': '@', '#': '#', '$': '$', '%': '%', '^': '^', '&': '&', '*': '*', '(': '(', '*': '*',
+    ')': ')', '-': '-', '_': '_', '=': '=', '+': '+', '[': '[', '{': '{', ']': ']', '}': '}', '\\\\': '\\', '/': '/',
+    '|': '|', ';': ';', ':': ':', "'": "'", '"': '"', "''": "'", '""': '"', ',': ',', '<': '<', '.': '.', '>': '>', '?': '?', '/': '/',
     # Numbers
-    '0': '0',
-    '1': '1',
-    '2': '2',
-    '3': '3',
-    '4': '4',
-    '5': '5',
-    '6': '6',
-    '7': '7',
-    '8': '8',
-    '9': '9',
+    '0': '0', '1': '1',
+    '2': '2', '3': '3',
+    '4': '4', '5': '5',
+    '6': '6', '7': '7',
+    '8': '8', '9': '9',
     # Special Bindings
-    '<65056>': 'Tab',
-    '<65437>': '5',
-    '<65511>': 'Left Alt',
-    '<96>': '0',
-    '<97>': '1',
-    '<98>': '2',
-    '<99>': '3',
-    '<100>': '4',
-    '<101>': '5',
-    '<102>': '6',
-    '<103>': '7',
-    '<104>': '8',
-    '<105>': '9',
-    '<106>': '*',
-    '<107>': '+',
-    '<109>': '-',
-    '<110>': '.',
-    '<111>': '/',
-    '<186>': ';',
-    '<188>': ',',
-    '<190>': '.',
-    '<191>': '/',
-    '<222>': "'",
+    '<65056>': 'Tab', '<65437>': '5', '<65511>': 'Left Alt', '<96>': '0', '<97>': '1', '<98>': '2', '<99>': '3', '<100>': '4', '<101>': '5', '<102>': '6',
+    '<103>': '7', '<104>': '8', '<105>': '9', '<106>': '*', '<107>': '+', '<109>': '-', '<110>': '.', '<111>': '/', '<186>': ';', '<188>': ',', '<190>': '.', '<191>': '/', '<222>': "'",
     # other special bindings
-    '\\x01': 'a',
-    '\\x02': 'b',
-    '\\x03': 'c',
-    '\\x04': 'd',
-    '\\x05': 'e',
-    '\\x06': 'f',
-    '\\x07': 'g',
-    '\\x08': 'h',
-    '\\t': 'i',
-    # '\\x10': 'j',
-    '\\n': 'j',
-    '\\x0b': 'k',
-    '\\x0c': 'l',
-    '\\r': 'm',
-    '\\x0e': 'n',
-    '\\x0f': 'o',
-    '\\x10': 'p',
-    '\\x11': 'q',
-    '\\x12': 'r',
-    '\\x13': 's',
-    '\\x14': 't',
-    '\\x15': 'u',
-    '\\x16': 'v',
-    '\\x17': 'w',
-    '\\x18': 'x',
-    '\\x19': 'y',
-    '\\x1a': 'z',
-    '\\x1b': '[',
-    '\\x1d': ']',
+    '\\x01': 'a', '\\x02': 'b', '\\x03': 'c', '\\x04': 'd',
+    '\\x05': 'e', '\\x06': 'f', '\\x07': 'g', '\\x08': 'h',
+    '\\t': 'i', '\\n': 'j', '\\x0b': 'k', '\\x0c': 'l',
+    '\\r': 'm', '\\x0e': 'n', '\\x0f': 'o', '\\x10': 'p',
+    '\\x11': 'q', '\\x12': 'r', '\\x13': 's', '\\x14': 't',
+    '\\x15': 'u', '\\x16': 'v', '\\x17': 'w', '\\x18': 'x',
+    '\\x19': 'y', '\\x1a': 'z', '\\x1b': '[', '\\x1d': ']',
 }
 
 
@@ -262,12 +120,13 @@ def filterKeys(key):
     return key
 
 
-# initialising tkinter
+# ? ---- TKINTER
 root = tk.Tk()
 root.columnconfigure(0, weight=1)
 previousActionVal = tk.StringVar(value="Previous Action")
 presentActionVal = tk.StringVar(value="Current Action")
 mouseActionVal = tk.StringVar(value="Mouse Action")
+# ? ----
 
 # ? ---- BACKEND
 # event listeners
@@ -383,20 +242,32 @@ def listenInputEvents():
 
 # ? ----
 
-# ? ---------- FRONTEND ----------
-
-
-# * ---------- Tkinter Gui Starts ----------
-FONT_NAME = "TkDefaultFont"
-ALPHA_VALUE = 1
-BG_COLOR = '#13274F'
-FONT_COLOR = '#FFFFFF'
-
-# Tkinter functions
+# * ---- GUI
+# ? ---- TKINTER FUNCTIONS
+# exit function
 
 
 def quitWindow(*args):
     root.quit()
+
+# saving last position of the window
+
+
+def saveLastClickPos(event):
+    global lastClickX, lastClickY
+    lastClickX = event.x
+    lastClickY = event.y
+
+# updating new position of the window
+
+
+def newPosition(event):
+    x = event.x - lastClickX + root.winfo_x()
+    y = event.y - lastClickY + root.winfo_y()
+
+    root.geometry(f'+{x}+{y}')
+# ? ----
+
 
 # ? ---- FOR LINUX (TRANSPARENT WINDOW)
 # root.wait_visibility(root)
@@ -404,27 +275,23 @@ def quitWindow(*args):
 # ? -----
 
 
-# setting font
-# font.nametofont(FONT_NAME)).configure(size=12)
-
-
 # ? ---- GUI ELEMENTS
 # frames
-first_frame = tk.Frame(root, background=BG_COLOR)
+first_frame = tk.Frame(root, background=ENV_VALUES['BG_COLOR'])
 first_frame.pack(side="top", fill="both", expand=True)
 
-second_frame = tk.Frame(root, background=BG_COLOR)
+second_frame = tk.Frame(root, background=ENV_VALUES['BG_COLOR'])
 second_frame.pack(side="top", fill="both", expand=True)
 
-third_frame = tk.Frame(root, background=BG_COLOR)
+third_frame = tk.Frame(root, background=ENV_VALUES['BG_COLOR'])
 third_frame.pack(side="top", fill="both", expand=True)
 
 # previous action label
 label1 = tk.Label(
     first_frame,
     textvariable=previousActionVal,
-    bg=BG_COLOR,
-    foreground=FONT_COLOR,
+    bg=ENV_VALUES['BG_COLOR'],
+    foreground=ENV_VALUES['FONT_COLOR'],
     anchor='w'
 )
 label1.pack(
@@ -449,10 +316,10 @@ button_quit = tk.Button(
     first_frame,
     image=cross_btn_image,
     command=quitWindow,
-    bg=BG_COLOR,
-    foreground=FONT_COLOR,
-    highlightbackground=BG_COLOR,
-    activebackground=BG_COLOR,
+    bg=ENV_VALUES['BG_COLOR'],
+    foreground=ENV_VALUES['FONT_COLOR'],
+    highlightbackground=ENV_VALUES['BG_COLOR'],
+    activebackground=ENV_VALUES['BG_COLOR'],
     borderwidth=0,
     cursor="hand2"
 )
@@ -462,17 +329,13 @@ button_quit.pack(
     ipadx=5
 )
 
-# children of left frame
-# previous_action_label = tk.Label(left_frame, textvariable=previousActionVal, font=(FONT_NAME, 11))
-# previous_action_label.pack(side="top", anchor="w", expand=True, fill="y", ipadx=10)
-
 # current action
 label3 = tk.Label(
     second_frame,
     textvariable=presentActionVal,
-    bg=BG_COLOR,
-    foreground=FONT_COLOR,
-    font=('TkinterDefault', 16),
+    bg=ENV_VALUES['BG_COLOR'],
+    foreground=ENV_VALUES['FONT_COLOR'],
+    font=(ENV_VALUES['FONT_NAME'], 16),
     anchor='w'
 )
 label3.pack(
@@ -482,15 +345,12 @@ label3.pack(
     padx=10
 )
 
-# present_action_label = tk.Label(left_frame, textvariable=presentActionVal, font=(FONT_NAME, 18, 'bold'))
-# present_action_label.pack(side="top", anchor="w", expand=True, fill="y", ipadx=10)
-
 # mouse action
 mouse_action_label = tk.Label(
     third_frame,
     textvariable=mouseActionVal,
-    bg=BG_COLOR,
-    foreground=FONT_COLOR,
+    bg=ENV_VALUES['BG_COLOR'],
+    foreground=ENV_VALUES['FONT_COLOR'],
     anchor='w'
 )
 mouse_action_label.pack(
@@ -499,13 +359,11 @@ mouse_action_label.pack(
     expand=True,
     padx=10
 )
+# ? ----
 
 # ?---- CONFIGURING TKINTER
 screen_length = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
-
-app_length = 350
-app_height = 130
 
 x_offset = int(screen_length - screen_length*0.21)
 y_offset = int(screen_height - screen_height*0.18)
@@ -520,11 +378,16 @@ root.resizable(False, False)
 root.attributes('-topmost', True)
 
 # size of the window
-root.geometry('{}x{}+{}+{}'.format(app_length, app_height, x_offset, y_offset))
-# ?----
+root.geometry(
+    '{}x{}+{}+{}'.format(ENV_VALUES['APP_WIDTH'], ENV_VALUES['APP_HEIGHT'], x_offset, y_offset))
 
 # firing event listeners
 listenInputEvents()
 
+# binding mouse events for dragging window
+root.bind('<Button-1>', saveLastClickPos)
+root.bind('<B1-Motion>', newPosition)
+
 # firing tkinter's event loop
 root.mainloop()
+# ?----
