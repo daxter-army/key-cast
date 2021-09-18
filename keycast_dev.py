@@ -198,14 +198,7 @@ def newPosition(event):
 
 
 # * ---------- Tkinter Gui Starts ----------
-FONT_NAME = "TkDefaultFont"
-ALPHA_VALUE = 1
-BG_COLOR = '#13274F'
-FONT_COLOR = '#FFFFFF'
-
 # Tkinter functions
-
-
 def quitWindow(*args):
     try:
         removeFile('./lockfile.txt')
