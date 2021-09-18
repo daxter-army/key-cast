@@ -37,4 +37,4 @@ exe = EXE(pyz,
           disable_windowed_traceback=False,
           target_arch=None,
           codesign_identity=None,
-          entitlements_file=None )
+          entitlements_file=None , icon='C:\\Users\\Mehul Singh\\Desktop\\key-cast\\assets\\icons\\logo\\keycast_logo_ico.ico')
