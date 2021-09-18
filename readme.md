@@ -34,6 +34,7 @@
   <ol>
     <li>
       <a href="#about-the-project">Introduction</a>
+      <a href="#functionalities">Functionalities</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -75,6 +76,13 @@ Here comes **Keycast**, which enables you to, screen cast your keyboard and mous
 - **Drag it anywhere:** Obstructing your view? place it anywhere on the screen.
 - **[IN PROGRESS!] Show in style:** Choose from numerous themes, or create your own.
 - **[IN PROGRESS!] Transparency control:** Adjust the transparency level of the panel as per your convenience.
+
+## Functionalities
+* Following are the functionalities implemented till now:
+* Show previous and current keypresses/key combinations
+* Show mouse activity
+* Drag and drop anywhere on the screen
+* Second instance prunning of the running application
 
 ### Built With
 
