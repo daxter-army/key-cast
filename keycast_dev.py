@@ -5,6 +5,7 @@ from pynput.mouse import Listener as MouseListener
 from pynput.keyboard import Listener as KeyboardListener
 import tkinter as tk
 from tkinter import ttk
+from os import remove as removeFile
 # import tkinter.font as font
 
 # for windows
@@ -206,6 +207,11 @@ FONT_COLOR = '#FFFFFF'
 
 
 def quitWindow(*args):
+    try:
+        removeFile('./lockfile.txt')
+    except:
+        pass
+
     root.quit()
 
 # ? ---- FOR LINUX (TRANSPARENT WINDOW)
