@@ -150,13 +150,13 @@ This section will help you to get started with the project, locally
 To create one distributable file on linux/OS X, type
 
 ```sh
-    pyinstaller keycast_prod.py --onefile --add-data "assets:assets"
+    pyinstaller keycast_prod.py --onefile -i "path_to_icon/icon_file.ico" --add-data "assets:assets"
 ```
 
 With hidden console window, in Windows, type
 
 ```sh
-    pyinstaller keycast_prod.py --onefile --add-data "assets:assets" --windowed
+    pyinstaller keycast_prod.py --onefile -i "path_to_icon/icon_file.ico" --add-data "assets:assets" --windowed
 ```
 
 With console window in the background, in Windows, remove **--windowed** argument
