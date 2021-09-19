@@ -306,8 +306,8 @@ mouse_action_label.pack(
 # setting up offsets wrt to platform
 if ENV_VALUES['PLATFORM'] == 'windows':
     # global xOffset, yOffset
-    xOffset = int(screen_length - ENV_VALUES['APP_WIDTH']*1.1)
-    yOffset = int(screen_height - ENV_VALUES['APP_HEIGHT']*1.7)
+    xOffset = int(screen_length - ENV_VALUES['APP_WIDTH']*1.05)
+    yOffset = int(screen_height - ENV_VALUES['APP_HEIGHT']*1.5)
 else:
     # global xOffset, yOffset
     xOffset = int(screen_length - ENV_VALUES['APP_WIDTH']*1.1)
