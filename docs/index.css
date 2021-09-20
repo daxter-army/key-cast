@@ -146,6 +146,10 @@ body {
   border-radius: 5px;
 }
 
+#demonstration {
+  margin-bottom: 15px;
+}
+
 #video-player {
   display: block;
   margin: auto;

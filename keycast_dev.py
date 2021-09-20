@@ -175,7 +175,7 @@ def newPosition(event):
     x = event.x - lastClickX + root.winfo_x()
     y = event.y - lastClickY + root.winfo_y()
 
-    print('x: ', x, 'y: ', y)
+    # print('x: ', x, 'y: ', y)
 
     # if x > screen_length*0.5 and y < screen_height*0.5:
     #     print('1st Q')
@@ -208,8 +208,8 @@ def quitWindow(*args):
     root.quit()
 
 # ? ---- FOR LINUX (TRANSPARENT WINDOW)
-# root.wait_visibility(root)
-# root.wm_attributes('-alpha', ENV_VALUES['ALPHA_VALUE'])
+root.wait_visibility(root)
+root.wm_attributes('-alpha', ENV_VALUES['ALPHA_VALUE'])
 # ? -----
 
 
