@@ -207,6 +207,23 @@ def quitWindow(*args):
 
     root.quit()
 
+def openSettings(*args):
+    # window config
+    offspring = tk.Toplevel(root)
+    offspring.geometry(f'300x300+{str(int(screen_length/2 - (300/2)))}+{str(int(screen_height/2 - (300/2)))}')
+    offspring.title('Child')
+    # offspring.resizable(False, False)
+
+    # elements
+    first_frame_offspring = tk.Frame(offspring, background=ENV_VALUES['BG_COLOR'])
+    first_frame_offspring.pack(side="top", fill="both", expand=True)
+
+    transparency_label = tk.Label(first_frame_offspring, text="Transparency Level")
+    transparency_label.pack(side='left', fill='both', expand=True)
+
+    exit_button = tk.Label(first_frame_offspring, text="Qut")
+    exit_button.pack(side='right', fill='both', expand=True)
+
 # ? ---- FOR LINUX (TRANSPARENT WINDOW)
 root.wait_visibility(root)
 root.wm_attributes('-alpha', ENV_VALUES['ALPHA_VALUE'])
@@ -333,6 +350,7 @@ listenInputEvents()
 # binding mouse events for dragging window
 root.bind('<Button-1>', saveLastClickPos)
 root.bind('<B1-Motion>', newPosition)
+root.bind('<Double-Button-1>', openSettings)
 
 # firing tkinter's event loop
 root.mainloop()
