@@ -61,7 +61,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## Introduction
+## ✨ Introduction
 
 <p align="center">
 <img src="https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/keycast_demo_gif_2.gif" width="75%" alt="Keycast in action"/>
@@ -77,14 +77,14 @@ Here comes **Keycast**, which enables you to, screen cast your keyboard and mous
 - **[IN PROGRESS!] Show in style:** Choose from numerous themes, or create your own.
 - **[IN PROGRESS!] Transparency control:** Adjust the transparency level of the panel as per your convenience.
 
-## Functionalities
+## 🌠 Functionalities
 * Following are the functionalities implemented till now:
 * Show previous and current keypresses/key combinations
 * Show mouse activity
 * Drag and drop anywhere on the screen
 * Second instance prunning of the running application
 
-### Built With
+### 🛠 Built With
 
 This was achieved with **Python** (cPython), with **Pynput** as global keyboard and mouse event listener, **Tkinter** powering the GUI, & **Pyinstaller** for creating distributable package files.
 
@@ -95,7 +95,7 @@ This was achieved with **Python** (cPython), with **Pynput** as global keyboard 
 
 <!-- GETTING STARTED -->
 
-## Getting Started
+## 🏎 Getting Started
 
 - You do not need Python installed to use this app, just go to the application [Homepage](https://daxter-army.github.io/key-cast), and download the package as per your OS.
 
@@ -103,11 +103,11 @@ This was achieved with **Python** (cPython), with **Pynput** as global keyboard 
 
 - After downloading the file, open the properties of the file, go to permissions tab and check the option saying **allow executing file as program**, and then run the file, now it would run smoothly.
 
-## Getting Started (Development)
+## 🚲 Getting Started (Development)
 
 This section will help you to get started with the project, locally
 
-## Prerequistes
+## 🗜 Prerequistes
 
 - You should be having Python version > 3.6.x
 - Install the requirements from **REQUIREMENTS.txt** file via **pip** before actually running the application, with
@@ -116,7 +116,7 @@ This section will help you to get started with the project, locally
     pip3 install -r REQUIREMENTS.txt
 ```
 
-### Installation
+### 🐱‍🏍 Installation
 
 - Clone the project locally with
 
@@ -145,7 +145,7 @@ This section will help you to get started with the project, locally
 
 - You have done it, you will be seeing a window running on your screen, if everything goes well.
 
-### Building
+### 🧪 Building
 
 To create one distributable file on linux/OS X, type
 
@@ -163,7 +163,7 @@ With console window in the background, in Windows, remove **--windowed** argumen
 
 <!-- USAGE EXAMPLES -->
 
-## Usage
+## 🥏 Usage
 
 <img src="https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/ui_screenshot.png" width="35%" alt="gui" />
 
@@ -184,13 +184,13 @@ Contributions are what make the open source community such an amazing place to l
 
 <!-- LICENSE -->
 
-## License
+## 🗄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 
-## Contact
+## 📱 Contact
 
 Mehul Singh Teya - mehulsinghteya@gmail.com | [LinkedIn](https://linkedin.com/in/mehulsinghteya)
 <br/>
@@ -198,7 +198,7 @@ Project Link: [https://github.com/daxter-army/key-cast](https://github.com/daxte
 <br/>
 Project Homepage : [https://daxter-army.github.io/key-cast](https://daxter-army.github.io/key-cast)
 
-## Acknowledgement
+## 🙏 Acknowledgement
 
 - [Fontawesome](https://fontawesome.com)
 - [Python](https://python.org)
@@ -206,7 +206,7 @@ Project Homepage : [https://daxter-army.github.io/key-cast](https://daxter-army.
 - [Pynput](https://pypi.org/project/pynput/)
 - [Pyinstaller](https://pyinstaller.readthedocs.io/en/stable/)
 
-## Info
+## ℹ Info
 
 - Right now it is heavily under development, and is being developed in linux (ubuntu). You can see unidentified characters being shown by the software, because sometimes different key combos having different key codes, I am working on this to support as many as keyboards and key combos possible.
 
@@ -216,7 +216,7 @@ Project Homepage : [https://daxter-army.github.io/key-cast](https://daxter-army.
 
 - For development use, **keycast_dev.py**, then copy-paste the whole code to **keycast_prod.py**, and also paste the code of additional files in that file also, to increase the performance.
 
-## Issues
+## 🐞 Issues
 
 Visit Issues tab
 <br/>
