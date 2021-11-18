@@ -21,6 +21,7 @@ try:
 except:
     pass
 
+# ? ---- ENVIRONMENTAL VARIABLES AND VALUES
 ENV_VALUES = {
     'PLATFORM': platform.system().lower(),
     'APP_WIDTH': 380,
@@ -139,8 +140,8 @@ def filterKeys(key):
 
     return key
 
-#? START WRITING FROM HERE
-# ? ---- TKINTER
+# ? ---- START TKINTER CODE FROM HERE
+# ? ---- TKINTER STARTS
 root = tk.Tk()
 root.columnconfigure(0, weight=1)
 previousActionVal = tk.StringVar(value="Previous Action")
@@ -160,7 +161,7 @@ yOffset = 0
 # selecting theme
 CURR_THEME_VAL = tk.StringVar(value="DEFAULT")
 
-# loading button images
+# loading button images in the production mode
 try:
     bundle_dir = getattr(sys, '_MEIPASS', path.abspath(path.dirname(__file__)))
     exit_btn_image = tk.PhotoImage(file=path.join(bundle_dir, 'assets', 'icons', 'times_solid_20_tomato.png'))
@@ -614,4 +615,4 @@ root.bind('<Double-Button-1>', openSettings)
 
 # firing tkinter's event loop
 root.mainloop()
-# ?----
+# ? ---- TKINTER ENDS
