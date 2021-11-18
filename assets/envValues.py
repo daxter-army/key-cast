@@ -21,8 +21,25 @@ ENV_VALUES = {
     'PLATFORM': platform.system().lower(),
     'APP_WIDTH': 380,
     'APP_HEIGHT': 140,
+    'SETTINGS_WIDTH': 300,
+    'SETTINGS_HEIGHT': 180,
     'FONT_NAME': 'TkDefaultFont',
-    'FONT_COLOR': '#FFFFFF',
-    'BG_COLOR': '#13274F',
     'ALPHA_VALUE': 1.0,
+    'ALPHA_VALUE_MIN': 0.3,
+    'ALPHA_VALUE_MAX': 1.0
+}
+
+THEMES = {
+    'DEFAULT': {
+        'BG_COLOR': '#13274F',
+        'FONT_COLOR': '#FFFFFF'
+    },
+    'HACKER': {
+        'BG_COLOR': '#222222',
+        'FONT_COLOR': '#08EC11'
+    },
+    'VANILLA': {
+        'BG_COLOR': '#FFFFFF',
+        'FONT_COLOR': '#222222'
+    },
 }

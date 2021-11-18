@@ -1,11 +1,12 @@
 # tkinter
-from assets.envValues import ENV_VALUES
+from assets.envValues import ENV_VALUES, THEMES
 from assets.keyUtils import keyDirectory, filterKeys
 from pynput.mouse import Listener as MouseListener
 from pynput.keyboard import Listener as KeyboardListener
 import tkinter as tk
-from tkinter import ttk
+from tkinter import Text, ttk
 from os import remove as removeFile
+# from math import 
 # import tkinter.font as font
 
 # for windows
@@ -23,6 +24,7 @@ root.columnconfigure(0, weight=1)
 previousActionVal = tk.StringVar(value="Previous Action")
 presentActionVal = tk.StringVar(value="Current Action")
 mouseActionVal = tk.StringVar(value="Mouse Action")
+opacityVal = tk.DoubleVar(value=1.0)
 
 screen_length = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -32,6 +34,17 @@ lastClickY = 0
 
 xOffset = 0
 yOffset = 0
+
+# selecting theme
+CURR_THEME_VAL = tk.StringVar(value="DEFAULT")
+
+# loading button images
+exit_btn_image = tk.PhotoImage(file='./assets/icons/times_solid_20_tomato.png')
+quit_btn_image_b = tk.PhotoImage(file='./assets/icons/times_solid_20_black.png')
+quit_btn_image_w = tk.PhotoImage(file='./assets/icons/times_solid_20_white.png')
+pref_btn_image_b = tk.PhotoImage(file='./assets/icons/settings_solid_18_black.png')
+pref_btn_image_w = tk.PhotoImage(file='./assets/icons/settings_solid_18_white.png')
+
 
 # ? ---- BACKEND
 # event listeners
@@ -207,22 +220,156 @@ def quitWindow(*args):
 
     root.quit()
 
+#* Child Process Functions Starts
 def openSettings(*args):
     # window config
     offspring = tk.Toplevel(root)
-    offspring.geometry(f'300x300+{str(int(screen_length/2 - (300/2)))}+{str(int(screen_height/2 - (300/2)))}')
-    offspring.title('Child')
-    # offspring.resizable(False, False)
+    settings_w = ENV_VALUES['SETTINGS_WIDTH']
+    settings_h = ENV_VALUES['SETTINGS_HEIGHT']
+    offspring.geometry(f'{settings_w}x{settings_h}+{str(int(screen_length/2 - (settings_w/2)))}+{str(int(screen_height/2 - (settings_h/2)))}')
+    offspring.title('Preferences')
+    # offspring.overrideredirect(True)
+    offspring.resizable(False, False)
+    # offspring.attributes('-toolwindow', True)
 
     # elements
-    first_frame_offspring = tk.Frame(offspring, background=ENV_VALUES['BG_COLOR'])
-    first_frame_offspring.pack(side="top", fill="both", expand=True)
+    # order matters here, not names, (just for declaration)
+    first_frame_offspring = tk.Frame(offspring)
+    first_frame_offspring.pack(side="top", fill="both", expand=True, padx=10)
 
-    transparency_label = tk.Label(first_frame_offspring, text="Transparency Level")
-    transparency_label.pack(side='left', fill='both', expand=True)
+    second_frame_offspring = tk.Frame(offspring)
+    second_frame_offspring.pack(side="top", fill="both", expand=True, padx=10, pady=5)
 
-    exit_button = tk.Label(first_frame_offspring, text="Qut")
-    exit_button.pack(side='right', fill='both', expand=True)
+    # separator_frame = tk.Frame(offspring)
+    # separator_frame.pack(side="top", fill="both", expand=True, padx=10)
+
+    # separator_label = tk.Label(offspring)
+    # separator_label.pack(fill='both', expand=True)
+
+    third_frame_offspring = tk.Frame(offspring)
+    third_frame_offspring.pack(side="top", fill="both", expand=True, padx=10)
+
+    fourth_frame_offspring = tk.Frame(offspring)
+    fourth_frame_offspring.pack(side="top", fill="both", expand=True, padx=10, pady=7)
+
+    theme_label = tk.Label(
+        first_frame_offspring,
+        text='Themes',
+        anchor='w',
+        pady=7
+    )
+    theme_label.pack(side='left', fill='both', expand=True)
+
+    # THEME STARTS
+    default_theme_btn = tk.Button(
+        second_frame_offspring,
+        text='Default',
+        command= lambda: changeTheme('DEFAULT'),
+        bg=THEMES['DEFAULT']['BG_COLOR'],
+        foreground=THEMES['DEFAULT']['FONT_COLOR'],
+        highlightbackground=THEMES['DEFAULT']['BG_COLOR'],
+        activebackground=THEMES['DEFAULT']['BG_COLOR'],
+    )
+    default_theme_btn.pack(side='left', fill='both', expand=True)
+
+    vanilla_theme_btn = tk.Button(
+        second_frame_offspring,
+        text='Vanilla',
+        command= lambda: changeTheme('VANILLA'),
+        bg=THEMES['VANILLA']['BG_COLOR'],
+        foreground=THEMES['VANILLA']['FONT_COLOR'],
+        highlightbackground=THEMES['VANILLA']['BG_COLOR'],
+        activebackground=THEMES['VANILLA']['BG_COLOR'],
+    )
+    vanilla_theme_btn.pack(side='left', fill='both', expand=True)
+
+    hacker_theme_btn = tk.Button(
+        second_frame_offspring,
+        text='Hacker',
+        command= lambda: changeTheme('HACKER'),
+        bg=THEMES['HACKER']['BG_COLOR'],
+        foreground=THEMES['HACKER']['FONT_COLOR'],
+        highlightbackground=THEMES['HACKER']['BG_COLOR'],
+        activebackground=THEMES['HACKER']['BG_COLOR'],
+    )
+    hacker_theme_btn.pack(side='left', fill='both', expand=True)
+    # THEME ENDS
+
+    opacity_label = tk.Label(
+        third_frame_offspring,
+        text='Opacity',
+        anchor='w'
+    )
+    opacity_label.pack(side='left', fill='both', expand=True)
+
+    # OPACITY STARTS
+    opacity_changer = ttk.Scale(
+        fourth_frame_offspring,
+        from_=ENV_VALUES['ALPHA_VALUE_MIN'],
+        to=ENV_VALUES['ALPHA_VALUE_MAX'],
+        orient='horizontal',
+        variable=opacityVal,
+        command=changeOpacity,
+    )
+    opacity_changer.pack(side='left', fill='both', expand=True)
+    # OPACITY ENDS
+
+def quitChildWindow(win):
+    win.quit()
+
+def changeOpacity(*args):
+    alphaVal = round(opacityVal.get(), 1)
+    root.wm_attributes('-alpha', alphaVal)
+    ENV_VALUES['ALPHA_VALUE'] = alphaVal
+    print(alphaVal)
+
+def changeTheme(theme):
+    CURR_THEME_VAL.set(theme)
+
+    # change all the props here
+    first_frame.configure(background=THEMES[theme]['BG_COLOR'])
+    second_frame.configure(background=THEMES[theme]['BG_COLOR'])
+    third_frame.configure(background=THEMES[theme]['BG_COLOR'])
+
+    label1.configure(bg=THEMES[theme]['BG_COLOR'], foreground=THEMES[theme]['FONT_COLOR'])
+    label3.configure(bg=THEMES[theme]['BG_COLOR'], foreground=THEMES[theme]['FONT_COLOR'])
+    mouse_action_label.configure(bg=THEMES[theme]['BG_COLOR'], foreground=THEMES[theme]['FONT_COLOR'])
+
+    if theme == "VANILLA":
+        button_quit.configure(
+            image=quit_btn_image_b,
+            bg=THEMES[theme]['BG_COLOR'],
+            foreground=THEMES[theme]['FONT_COLOR'],
+            highlightbackground=THEMES[theme]['BG_COLOR'],
+            activebackground=THEMES[theme]['BG_COLOR'],
+        )
+
+        button_pref.configure(
+            image=pref_btn_image_b,
+            bg=THEMES[theme]['BG_COLOR'],
+            foreground=THEMES[theme]['FONT_COLOR'],
+            highlightbackground=THEMES[theme]['BG_COLOR'],
+            activebackground=THEMES[theme]['BG_COLOR'],
+        )
+    else:
+        button_quit.configure(
+            image=quit_btn_image_w,
+            bg=THEMES[theme]['BG_COLOR'],
+            foreground=THEMES[theme]['FONT_COLOR'],
+            highlightbackground=THEMES[theme]['BG_COLOR'],
+            activebackground=THEMES[theme]['BG_COLOR'],
+        )
+        button_pref.configure(
+            image=pref_btn_image_w,
+            bg=THEMES[theme]['BG_COLOR'],
+            foreground=THEMES[theme]['FONT_COLOR'],
+            highlightbackground=THEMES[theme]['BG_COLOR'],
+            activebackground=THEMES[theme]['BG_COLOR'],
+        )
+    
+    print(theme)
+
+#* Child Process Functions Ends
 
 # ? ---- FOR LINUX (TRANSPARENT WINDOW)
 root.wait_visibility(root)
@@ -236,21 +383,21 @@ root.wm_attributes('-alpha', ENV_VALUES['ALPHA_VALUE'])
 
 # ? ---- GUI ELEMENTS
 # frames
-first_frame = tk.Frame(root, background=ENV_VALUES['BG_COLOR'])
+first_frame = tk.Frame(root, background=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'])
 first_frame.pack(side="top", fill="both", expand=True)
 
-second_frame = tk.Frame(root, background=ENV_VALUES['BG_COLOR'])
+second_frame = tk.Frame(root, background=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'])
 second_frame.pack(side="top", fill="both", expand=True)
 
-third_frame = tk.Frame(root, background=ENV_VALUES['BG_COLOR'])
+third_frame = tk.Frame(root, background=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'])
 third_frame.pack(side="top", fill="both", expand=True)
 
 # previous action label
 label1 = tk.Label(
     first_frame,
     textvariable=previousActionVal,
-    bg=ENV_VALUES['BG_COLOR'],
-    foreground=ENV_VALUES['FONT_COLOR'],
+    bg=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'],
+    foreground=THEMES[CURR_THEME_VAL.get()]['FONT_COLOR'],
     anchor='w'
 )
 label1.pack(
@@ -261,25 +408,40 @@ label1.pack(
 )
 
 # quit button
-cross_btn_image = tk.PhotoImage(
-    file='./assets/icons/cross/times_solid_20_white.png')
 button_quit = tk.Button(
     first_frame,
-    image=cross_btn_image,
+    image=quit_btn_image_w,
     command=quitWindow,
-    bg=ENV_VALUES['BG_COLOR'],
-    foreground=ENV_VALUES['FONT_COLOR'],
-    highlightbackground=ENV_VALUES['BG_COLOR'],
-    activebackground=ENV_VALUES['BG_COLOR'],
+    bg=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'],
+    foreground=THEMES[CURR_THEME_VAL.get()]['FONT_COLOR'],
+    highlightbackground=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'],
+    activebackground=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'],
     borderwidth=0,
     cursor="hand2"
 )
 button_quit.pack(
     side='right',
     fill='both',
-    ipadx=5
+    ipadx=7
 )
 
+# settings button
+button_pref = tk.Button(
+    third_frame,
+    image=pref_btn_image_w,
+    command=openSettings,
+    bg=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'],
+    foreground=THEMES[CURR_THEME_VAL.get()]['FONT_COLOR'],
+    highlightbackground=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'],
+    activebackground=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'],
+    borderwidth=0,
+    cursor="hand2"
+)
+button_pref.pack(
+    side='right',
+    fill='both',
+    ipadx=7
+)
 # children of left frame
 # previous_action_label = tk.Label(left_frame, textvariable=previousActionVal, font=(FONT_NAME, 11))
 # previous_action_label.pack(side="top", anchor="w", expand=True, fill="y", ipadx=10)
@@ -288,8 +450,8 @@ button_quit.pack(
 label3 = tk.Label(
     second_frame,
     textvariable=presentActionVal,
-    bg=ENV_VALUES['BG_COLOR'],
-    foreground=ENV_VALUES['FONT_COLOR'],
+    bg=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'],
+    foreground=THEMES[CURR_THEME_VAL.get()]['FONT_COLOR'],
     font=(ENV_VALUES['FONT_NAME'], 16),
     anchor='w'
 )
@@ -307,8 +469,8 @@ label3.pack(
 mouse_action_label = tk.Label(
     third_frame,
     textvariable=mouseActionVal,
-    bg=ENV_VALUES['BG_COLOR'],
-    foreground=ENV_VALUES['FONT_COLOR'],
+    bg=THEMES[CURR_THEME_VAL.get()]['BG_COLOR'],
+    foreground=THEMES[CURR_THEME_VAL.get()]['FONT_COLOR'],
     anchor='w'
 )
 mouse_action_label.pack(
