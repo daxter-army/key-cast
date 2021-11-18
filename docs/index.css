@@ -72,9 +72,12 @@ body {
   animation: chamaleon 20s infinite;
 }
 
-#key-card #first-row {
+#key-card #first-row, #third-row {
   display: flex;
   justify-content: space-between;
+}
+
+#first-row-left {
   font-size: 15px;
 }
 
@@ -87,7 +90,7 @@ body {
   font-size: 1.75rem;
 }
 
-#key-card #third-row {
+#third-row, #first-row-right {
   font-size: large;
 }
 
@@ -192,14 +195,14 @@ body {
   }
 
   30% {
-    color: #000000;
-    border: 2px white solid;
+    color: black;
+    border: 2px black solid;
     background-color: white;
   }
 
   60% {
-    color: black;
+    color: #08EC11;
     border: 2px black solid;
-    background-color: white;
+    background-color: black;
   }
 }
