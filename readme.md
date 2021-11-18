@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/daxter-army/key-cast/">
-    <img src="https://github.com/daxter-army/key-cast/blob/main/assets/icons/logo/keycast_logo_png.png" alt="Logo" width="50">
+    <img src="./logo/kc_64x64_logo.png" alt="Logo" width="50">
   </a>
 
   <h3 align="center">Key Cast</h3>
@@ -64,7 +64,7 @@
 ## ✨ Introduction
 
 <p align="center">
-<img src="https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/keycast_demo_gif_2.gif" width="75%" alt="Keycast in action"/>
+<img src="./docs/docs_assets/keycast_demo_gif_2.gif" width="75%" alt="Keycast in action"/>
 </p>
 
 In this internet age, everyone is learning to stay ahead in their career or to develop something new, creative and fun. Digging the internet for quality tutorials, watching that youtube videos of blender, illustrator, photoshop, webdev and what not. To give back to your community, you also thought of creating some tutorials, but guess what, you are not having any good keyboard and mouse indicators, and that ones which are available in the market, do not suits your personality.
@@ -74,8 +74,8 @@ Here comes **Keycast**, which enables you to, screen cast your keyboard and mous
 - **Cross-platform:** Run it anywhere. Run it on Linux, Windows or OS X.
 - **Keybaord & mouse clicks:** From keyboard presses to mouse clicks, we've covered you all!.
 - **Drag it anywhere:** Obstructing your view? place it anywhere on the screen.
-- **[IN PROGRESS!] Show in style:** Choose from numerous themes, or create your own.
-- **[IN PROGRESS!] Transparency control:** Adjust the transparency level of the panel as per your convenience.
+- **Show in style:** Choose from numerous themes, or create your own.
+- **Transparency control:** Adjust the transparency level of the panel as per your convenience.
 
 ## 🌠 Functionalities
 * Following are the functionalities implemented till now:
@@ -156,7 +156,7 @@ To create one distributable file on linux/OS X, type
 With hidden console window, in Windows, type
 
 ```sh
-    pyinstaller keycast_prod.py --onefile -i "path_to_icon/icon_file.ico" --add-data "assets:assets" --windowed
+    pyinstaller keycast_prod.py --onefile -i "path_to_icon/icon_file.ico" --add-data "assets;assets" --windowed
 ```
 
 With console window in the background, in Windows, remove **--windowed** argument
@@ -165,11 +165,14 @@ With console window in the background, in Windows, remove **--windowed** argumen
 
 ## 🥏 Usage
 
-<img src="https://github.com/daxter-army/key-cast/blob/main/docs/docs_assets/ui_screenshot.png" width="35%" alt="gui" />
+<p align="center">
+  <img src="./docs/docs_assets/ui-ss-def.png" style="margin: 0px 10px;" alt="gui-default" />
+  <img src="./docs/docs_assets/ui-ss-van.png" style="margin: 0px 10px;" alt="gui-vanilla" />
+  <img src="./docs/docs_assets/ui-ss-hac.png" style="margin: 0px 10px;" alt="gui-hacker" />
+</p>
 
-You can use it with any of your favourite software while making any tutorial, screen casting your screen, or while streaming your game over the internet.
-
-**More themes coming soon!**
+* You can use it with any of your favourite software while making any tutorial, screen casting your screen, or while streaming your game over the internet.
+* Choose any of the style that suits your mood, and flex in your way. 😎
 
 <!-- CONTRIBUTING -->
 <!-- ## Contributing

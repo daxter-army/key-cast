@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['keycast_prod.py'],
-             pathex=['C:\\Users\\Mehul Singh\\Desktop\\key-cast'],
+             pathex=['C:\\Users\\Mehul Singh\\Desktop\\github_repos\\key-cast'],
              binaries=[],
              datas=[('assets', 'assets')],
              hiddenimports=[],
@@ -37,4 +37,4 @@ exe = EXE(pyz,
           disable_windowed_traceback=False,
           target_arch=None,
           codesign_identity=None,
-          entitlements_file=None , icon='C:\\Users\\Mehul Singh\\Desktop\\key-cast\\assets\\icons\\logo\\keycast_logo_ico.ico')
+          entitlements_file=None , icon='logo16x16.ico')

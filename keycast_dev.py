@@ -529,10 +529,3 @@ root.bind('<Double-Button-1>', openSettings)
 
 # firing tkinter's event loop
 root.mainloop()
-
-# for building from source file
-# windows
-# pyinstaller keycast_onefile.py --onefile --add-data "assets;assets" --windowed
-
-# linux/macos
-# pyinstaller keycast_onefile.py --onefile --add-data "assets:assets"
