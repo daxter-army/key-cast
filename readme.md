@@ -166,9 +166,9 @@ With console window in the background, in Windows, remove **--windowed** argumen
 ## 🥏 Usage
 
 <p align="center">
-  <img src="./docs/docs_assets/ui-ss-def.png" width="20%" style="margin: 0px 10px;" alt="gui-default" />
-  <img src="./docs/docs_assets/ui-ss-van.png" width="20%" style="margin: 0px 10px;" alt="gui-vanilla" />
-  <img src="./docs/docs_assets/ui-ss-hac.png" width="20%" style="margin: 0px 10px;" alt="gui-hacker" />
+  <img src="./docs/docs_assets/ui-ss-def.png" width="30%" alt="gui-default" />
+  <img src="./docs/docs_assets/ui-ss-van.png" width="30%" alt="gui-vanilla" />
+  <img src="./docs/docs_assets/ui-ss-hac.png" width="30%" alt="gui-hacker" />
 </p>
 
 * You can use it with any of your favourite software while making any tutorial, screen casting your screen, or while streaming your game over the internet.
