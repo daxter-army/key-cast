@@ -42,9 +42,10 @@ CURR_THEME_VAL = tk.StringVar(value="DEFAULT")
 exit_btn_image = tk.PhotoImage(file='./assets/icons/times_solid_20_tomato.png')
 quit_btn_image_b = tk.PhotoImage(file='./assets/icons/times_solid_20_black.png')
 quit_btn_image_w = tk.PhotoImage(file='./assets/icons/times_solid_20_white.png')
+quit_btn_image_g = tk.PhotoImage(file='./assets/icons/times_solid_20_green.png')
 pref_btn_image_b = tk.PhotoImage(file='./assets/icons/settings_solid_18_black.png')
 pref_btn_image_w = tk.PhotoImage(file='./assets/icons/settings_solid_18_white.png')
-
+pref_btn_image_g = tk.PhotoImage(file='./assets/icons/settings_solid_18_green.png')
 
 # ? ---- BACKEND
 # event listeners
@@ -153,8 +154,7 @@ def mouseButtonPressed(x, y, button, pressed):
         mouseActionVal.set(f'{buttonType.capitalize()} Mouse Button')
 
 # activates on mouse scroll
-#! not working in windows, dont know about mac
-
+#! not working in windows (trackpad only), dont know about mac
 
 def mouseScrolled(x, y, dx, dy):
     # print(x, y, dx, dy)
@@ -213,10 +213,10 @@ def newPosition(event):
 # * ---------- Tkinter Gui Starts ----------
 # Tkinter functions
 def quitWindow(*args):
-    try:
-        removeFile('./lockfile.txt')
-    except:
-        pass
+    # try:
+    #     removeFile('./lockfile.txt')
+    # except:
+    #     pass
 
     root.quit()
 
@@ -314,9 +314,6 @@ def openSettings(*args):
     opacity_changer.pack(side='left', fill='both', expand=True)
     # OPACITY ENDS
 
-def quitChildWindow(win):
-    win.quit()
-
 def changeOpacity(*args):
     alphaVal = round(opacityVal.get(), 1)
     root.wm_attributes('-alpha', alphaVal)
@@ -346,6 +343,22 @@ def changeTheme(theme):
 
         button_pref.configure(
             image=pref_btn_image_b,
+            bg=THEMES[theme]['BG_COLOR'],
+            foreground=THEMES[theme]['FONT_COLOR'],
+            highlightbackground=THEMES[theme]['BG_COLOR'],
+            activebackground=THEMES[theme]['BG_COLOR'],
+        )
+    elif theme == "HACKER":
+        button_quit.configure(
+            image=quit_btn_image_g,
+            bg=THEMES[theme]['BG_COLOR'],
+            foreground=THEMES[theme]['FONT_COLOR'],
+            highlightbackground=THEMES[theme]['BG_COLOR'],
+            activebackground=THEMES[theme]['BG_COLOR'],
+        )
+
+        button_pref.configure(
+            image=pref_btn_image_g,
             bg=THEMES[theme]['BG_COLOR'],
             foreground=THEMES[theme]['FONT_COLOR'],
             highlightbackground=THEMES[theme]['BG_COLOR'],
