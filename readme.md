@@ -82,7 +82,8 @@ Here comes **Keycast**, which enables you to, screen cast your keyboard and mous
 * Show previous and current keypresses/key combinations
 * Show mouse activity
 * Drag and drop anywhere on the screen
-* Second instance prunning of the running application
+* Various themes
+* Adjust the transparency level of the window
 
 ### 🛠 Built With
 
