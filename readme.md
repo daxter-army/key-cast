@@ -74,16 +74,17 @@ Here comes **Keycast**, which enables you to, screen cast your keyboard and mous
 - **Cross-platform:** Run it anywhere. Run it on Linux, Windows or OS X.
 - **Keybaord & mouse clicks:** From keyboard presses to mouse clicks, we've covered you all!.
 - **Drag it anywhere:** Obstructing your view? place it anywhere on the screen.
-- **Show in style:** Choose from numerous themes, or create your own.
+- **Show in style:** Choose from the themes, suit your mood.
 - **Transparency control:** Adjust the transparency level of the panel as per your convenience.
 
 ## 🌠 Functionalities
-* Following are the functionalities implemented till now:
-* Show previous and current keypresses/key combinations
-* Show mouse activity
-* Drag and drop anywhere on the screen
-* Various themes
-* Adjust the transparency level of the window
+
+- Following are the functionalities implemented till now:
+- Show previous and current keypresses/key combinations
+- Show mouse activity
+- Drag and drop anywhere on the screen
+- Various themes
+- Adjust the transparency level of the window
 
 ### 🛠 Built With
 
@@ -172,8 +173,8 @@ With console window in the background, in Windows, remove **--windowed** argumen
   <img src="./docs/docs_assets/ui-ss-hac.png" width="30%" alt="gui-hacker" />
 </p>
 
-* You can use it with any of your favourite software while making any tutorial, screen casting your screen, or while streaming your game over the internet.
-* Choose any of the style that suits your mood, and flex in your way. 😎
+- You can use it with any of your favourite software while making any tutorial, screen casting your screen, or while streaming your game over the internet.
+- Choose any of the style that suits your mood, and flex in your way. 😎
 
 <!-- CONTRIBUTING -->
 <!-- ## Contributing
