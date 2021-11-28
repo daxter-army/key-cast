@@ -79,7 +79,7 @@ Here comes **Keycast**, which enables you to, screen cast your keyboard and mous
 
 ## 🌠 Functionalities
 
-- Following are the functionalities implemented till now:
+- **Following are the functionalities implemented till now:**
 - Show previous and current keypresses/key combinations
 - Show mouse activity
 - Drag and drop anywhere on the screen
