@@ -119,7 +119,7 @@ This section will help you to get started with the project, locally
     pip3 install -r REQUIREMENTS.txt
 ```
 
-### 🐱‍🏍 Installation
+### 🏍️ Installation
 
 - Clone the project locally with
 
